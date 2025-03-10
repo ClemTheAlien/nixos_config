@@ -1,4 +1,3 @@
-nitrogen --restore
 wal -R
 clear
 fastfetch

@@ -66,6 +66,8 @@
 		swaylock-effects #lockscreen
 		rofi-wayland # rofi 
 		wl-clipboard #clipboard
+		waypaper #wallpapers
+		waybar #customizable bar
 
 		shutter #screenshot
 		alacritty #terminal

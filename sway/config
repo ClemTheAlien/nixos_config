@@ -17,7 +17,8 @@ set $right l
 set $term alacritty
 # Your preferred application launcher
 set $menu rofi -show drun
-
+#Wallpaper 
+exec waypaper --restore
 #
 # Basics:
 #
