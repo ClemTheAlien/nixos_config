@@ -1,0 +1,23 @@
+[window]
+
+opacity = 0.7
+
+dynamic_padding = true
+decorations= "None"
+startup_mode = "Windowed"
+
+[scrolling]
+multiplier = 6
+
+[font]
+normal = {family = "Fira Code", style = "Retina"}
+glyph_offset = {x=-1, y =0}
+size = 8.5
+[cursor]
+style={shape = "Beam",blinking = "Always"}
+unfocused_hollow = false
+
+[mouse]
+hide_when_typing = true
+
+
