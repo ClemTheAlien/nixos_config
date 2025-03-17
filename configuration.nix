@@ -8,7 +8,17 @@
 		./hardware-configuration.nix
 	];
 	#Update Kernel (fix audio)
-	boot.kernelPackages = pkgs.linuxPackages_latest;
+	boot.kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_12.override { argsOverride = { version = "6.12"; }; });
+	#Nvidia Support
+	hardware.graphics.enable = true;
+	services.xserver.videoDrivers = ["noveau"];
+	hardware.nvidia.open = true;
+	hardware.nvidia. nvidiaSettings = true;
+	hardware.nvidia.prime = {
+    		offload.enable = true;
+    		intelBusId = "PCI:0:2:0";
+    		nvidiaBusId = "PCI:1:0:0";
+  	};
  	# Bootloader.
 	boot.loader.systemd-boot.enable =true;
 	# Hostname
@@ -58,7 +68,7 @@
 		bluez-tools #bluetooth
 		blueman #bluetooth gui
 		networkmanagerapplet #wifi controller
-		pavucontrol #audio controller
+		pavucontrol #audio
 		swaybg #backgrounds
 		mako #notifications
 		pcmanfm #file explorer
@@ -148,16 +158,15 @@
 				xdg-desktop-portal-gtk
 		];
 	};
-	#Audio (PipeWire)
+	#Audio (Pipewire)
 	services.pipewire = {
 		enable = true;
-		alsa.enable = true;
-		alsa.support32Bit = true;
 		pulse.enable = true;
-		jack.enable = true;
 	};
+
 	#Bluetooth 
 	services.blueman.enable = true;
 	hardware.bluetooth.enable = true; 
 	hardware.bluetooth.powerOnBoot = true;
 }
+

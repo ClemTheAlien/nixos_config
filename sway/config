@@ -1,4 +1,3 @@
-# Default config for sway
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
@@ -169,22 +168,8 @@ bindsym $mod+Shift+a mode "resize"
     # Special key to take a screenshot with grim
     bindsym Print exec grim
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
 
 include /etc/sway/config.d/*
+bar { 
+     swaybar_command waybar
+}
