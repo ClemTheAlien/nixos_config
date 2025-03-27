@@ -1,0 +1,29 @@
+{
+    "layer": "top",
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["cpu","memory","battery","pulseaudio", "clock"],
+    "sway/window": {
+        "max-length":50,
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["⚡︎"]
+    },
+    
+    "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "{:%Y-%m-%d}",
+    },
+
+    "cpu": {
+	"format": "{icon0} {icon1} {icon2} {icon3}",
+	"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+    },
+    "memory": {
+	"format":"Mem:{percentage}%",
+    },
+    "pulseaudio":{
+	"format": "Vol: {volume}%",
+    },
+}
