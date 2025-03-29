@@ -173,3 +173,9 @@ include /etc/sway/config.d/*
 bar { 
      swaybar_command waybar
 }
+default_border none
+default_floating_border none
+titlebar_padding 1
+titlebar_border_thickness 0
+gaps inner 10
+gaps outer 10
