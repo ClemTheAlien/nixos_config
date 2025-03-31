@@ -91,6 +91,9 @@
 		keepassxc # password manager
 		vlc #video 
 
+		        #Productivity
+                emacs # Note editor
+
 			# Chat Apps
 		vesktop #discord
 		weechat #irc
