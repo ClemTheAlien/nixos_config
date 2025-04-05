@@ -85,34 +85,27 @@
 		pywal # colorscheme
 
 		# Apps
-			# General Apps 
-		librewolf #browser
+			# General Apps
 		libreoffice #document suite editor
 		keepassxc # password manager
 		vlc #video 
 
-		        #Productivity
-                emacs # Note editor
+		  #Productivity
+    emacs # Note editor
 
 			# Chat Apps
 		vesktop #discord
 		weechat #irc
 			
-			#Music
-		spotify 
-
 			#Coding Tools
 		git # ver control
+		gitflow #git flow (enhanced ver control)
 		vscodium #IDE 
-		libgcc #gcc compiler
-		android-studio #android tools		
-			#Languages
-			flutter #cross-platform app dev 
-
 
 			# CyberSec Tools
 		wireshark # packet sniffing
 		mullvad-vpn #VPN
+		
 			#Electrical Engineering Tools
 		kicad #pcb maker
 		logisim-evolution #pcb maker
