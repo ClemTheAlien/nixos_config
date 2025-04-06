@@ -143,6 +143,7 @@
 		noto-fonts-emoji
 		fira-code
 		fira-code-symbols
+		alegreya
 	];
 
 	#Flatpak
