@@ -91,7 +91,7 @@
 		vlc #video 
 
 		  #Productivity
-    emacs # Note editor
+    	emacs # Note editor
 
 			# Chat Apps
 		vesktop #discord
