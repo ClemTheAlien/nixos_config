@@ -39,6 +39,10 @@
 	users.groups.libvirtd.members = ["clemmie"];
 	virtualisation.libvirtd.enable = true;
 
+	#Docker
+	virtualisation.docker.enable = true;
+	virtualisation.podman.enable = true;
+
 	# Select internationalisation properties.
 	i18n.defaultLocale = "en_US.UTF-8";
 	i18n.extraLocaleSettings = {
@@ -59,7 +63,7 @@
 	users.users.clemmie = {
 		isNormalUser = true;
 		description = "clemmie";
-		extraGroups = [ "networkmanager" "wheel" ];
+		extraGroups = [ "networkmanager" "wheel" "docker"];
 		packages = with pkgs; [];
 		shell = pkgs.zsh;
 	};
@@ -110,6 +114,7 @@
 			# CyberSec Tools
 		wireshark # packet sniffing
 		mullvad-vpn #VPN
+		docker-compose #docker compose
 		
 			#Electrical Engineering Tools
 		kicad #pcb maker
