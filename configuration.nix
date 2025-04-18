@@ -93,6 +93,7 @@
 		libreoffice #document suite editor
 		keepassxc # password manager
 		vlc #video 
+		librewolf #browser (use SearXNG as search engine)
 
 		  #Productivity
     emacs # Note editor
