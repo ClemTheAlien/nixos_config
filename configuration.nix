@@ -34,6 +34,10 @@
 	  nssmdns4 = true;
 	  openFirewall = true;
 	};
+	# Virt Manager (Only Qemu/KVM hypervisor) 
+	programs.virt-manager.enable = true;
+	users.groups.libvirtd.members = ["clemmie"];
+	virtualisation.libvirtd.enable = true;
 
 	# Select internationalisation properties.
 	i18n.defaultLocale = "en_US.UTF-8";
