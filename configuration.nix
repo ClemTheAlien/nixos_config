@@ -82,6 +82,7 @@
 		wl-clipboard #clipboard
 		waypaper #wallpapers
 		waybar #customizable bar
+		homemanager #manages dots 
 
 		shutter #screenshot
 		alacritty #terminal
