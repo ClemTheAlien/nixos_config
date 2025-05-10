@@ -82,7 +82,8 @@
 		shutter #screenshot
 		alacritty #terminal
 		fastfetch #fetch
-		pywal # colorscheme
+		pywal16 # colorscheme
+		imagemagick #colorscheme backend
 
 		# Apps
 			# General Apps
