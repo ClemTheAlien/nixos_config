@@ -88,6 +88,7 @@
 		fastfetch #fetch
 		pywal16 # colorscheme
 		imagemagick #colorscheme backend
+		cava #audio visualizer
 
 		# Apps
 			# General Apps
@@ -97,7 +98,7 @@
 		librewolf #browser (use SearXNG as search engine)
 
 		  #Productivity
-    emacs # Note editor
+    	emacs # Note editor
 
 			# Chat Apps
 		vesktop #discord
