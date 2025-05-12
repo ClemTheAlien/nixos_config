@@ -107,7 +107,7 @@
 		git # ver control
 		gitflow #git flow (enhanced ver control)
 		vscodium #IDE 
-
+		cudatoolkit #CUDA Support
 			# CyberSec Tools
 		wireshark # packet sniffing
 		mullvad-vpn #VPN
