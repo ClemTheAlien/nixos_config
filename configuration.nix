@@ -98,7 +98,7 @@
 		librewolf #browser (use SearXNG as search engine)
 
 		  #Productivity
-    	emacs # Note editor
+    mmex #money manager 
 
 			# Chat Apps & Games
 		vesktop #discord
