@@ -91,7 +91,7 @@
 		vlc #video 
 
 		  #Productivity
-    emacs # Note editor
+    mmex #money manager 
 
 			# Chat Apps & Games
 		vesktop #discord
