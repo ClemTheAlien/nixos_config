@@ -100,9 +100,10 @@
 		  #Productivity
     	emacs # Note editor
 
-			# Chat Apps
+			# Chat Apps & Games
 		vesktop #discord
 		weechat #irc
+		lutris #game manager
 			
 			#Coding Tools
 		git # ver control
