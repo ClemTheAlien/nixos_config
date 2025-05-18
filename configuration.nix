@@ -90,8 +90,10 @@
 		keepassxc # password manager
 		vlc #video 
 
-		  #Productivity
-    mmex #money manager 
+		  #Productivity & Browsers
+    	mmex #money manager 
+		brave #browser
+		qutebrowser #browser 
 
 			# Chat Apps & Games
 		vesktop #discord
