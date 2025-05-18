@@ -20,7 +20,7 @@
     		nvidiaBusId = "PCI:1:0:0";
   	};
  	# Bootloader.
-	boot.loader.systemd-boot.enable =true;
+	boot.loader.limine.enable =true;
 	# Hostname
 	networking.hostName = "[CHANGE ME]";
 	# Enable networking
@@ -129,7 +129,7 @@
 		
 	];
 	# Sys Ver
-	system.stateVersion = "24.11";
+	system.stateVersion = "25.05";
 	
 	#SwayWM
 	programs.sway = {
