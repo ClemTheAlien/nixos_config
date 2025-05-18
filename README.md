@@ -5,8 +5,7 @@ These dotfiles require an exact or similar layout of my configuration.nix file i
 ## Additional Warnings
 - I make sure my Kernel is the 6.12.18 version to fix my device's audio issues while keeping it current enough
 - I omitted my Timezone and Hostname in the config so make sure to edit that
-- I have Unfree Packages enabled
-- I use the NixOS unstable package repo
+- I have Unfree Packages enabled 
 - I use ZSH instead of BASH and I use the autosuggestion and syntax higlighting plugins, in which I git clone to .zsh 
 
 > **Follow the Instructions.md file to install my dotfiles until I learn Home Manager and Flakes well enough.**

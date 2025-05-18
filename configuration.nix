@@ -2,19 +2,13 @@
 
 { config, pkgs, lib, ... }:
 
-let  # Add the unstable channel declaratively
-    unstableTarball =
-      fetchTarball
-        https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz;
-
-in 
 {
 	imports =
 	[ # Include the results of the hardware scan.
 		./hardware-configuration.nix
 	];
 	#Update Kernel (fix audio)
-	unstable.boot.kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_12.override { argsOverride = { version = "6.12"; }; });
+	boot.kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_12.override { argsOverride = { version = "6.12"; }; });
 	#Nvidia Support
 	hardware.graphics.enable = true;
 	services.xserver.videoDrivers = ["noveau"];
@@ -26,7 +20,7 @@ in
     		nvidiaBusId = "PCI:1:0:0";
   	};
  	# Bootloader.
-	boot.loader.limine.enable =true;
+	boot.loader.systemd-boot.enable =true;
 	# Hostname
 	networking.hostName = "[CHANGE ME]";
 	# Enable networking
