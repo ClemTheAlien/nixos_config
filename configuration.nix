@@ -97,8 +97,10 @@
 		vlc #video 
 		librewolf #browser (use SearXNG as search engine)
 
-		  #Productivity
-    mmex #money manager 
+		  #Productivity & Browsers
+    	mmex #money manager 
+		brave #browser
+		qutebrowser #browser 
 
 			# Chat Apps & Games
 		vesktop #discord
