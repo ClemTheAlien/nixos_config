@@ -130,7 +130,7 @@
 		
 	];
 	# Sys Ver
-	system.stateVersion = "24.11";
+	system.stateVersion = "25.05";
 	
 	#SwayWM
 	programs.sway = {
@@ -139,6 +139,7 @@
   	};	
 	services.displayManager = {
 		ly.enable = true;
+		ly.settings = {animation = "matrix";};
 	};
 
 	# File System Auto USB Mount
