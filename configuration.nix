@@ -20,7 +20,8 @@
     		nvidiaBusId = "PCI:1:0:0";
   	};
  	# Bootloader.
-	boot.loader.limine.enable =true;
+	boot.loader.systemd-boot.enable =true;
+	boot.loader.limine.style.wallpapers = [/home/clemmie/.backgrounds/boot.jpg];
 	# Hostname
 	networking.hostName = "[CHANGE ME]";
 	# Enable networking
