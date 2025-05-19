@@ -139,6 +139,7 @@
   	};	
 	services.displayManager = {
 		ly.enable = true;
+		ly.settings = {animation = "matrix";};
 	};
 
 	# File System Auto USB Mount
