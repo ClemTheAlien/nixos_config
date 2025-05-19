@@ -21,6 +21,7 @@
   	};
  	# Bootloader.
 	boot.loader.systemd-boot.enable =true;
+	boot.loader.limine.style.wallpapers = [/home/clemmie/.backgrounds/boot.jpg];
 	# Hostname
 	networking.hostName = "[CHANGE ME]";
 	# Enable networking
