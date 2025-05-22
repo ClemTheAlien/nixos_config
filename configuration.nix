@@ -56,7 +56,7 @@
 	#Default Shell (ZSH)
 	programs.zsh.enable = true; # Use script with dotfiles to install zsh plugins
 	programs.zsh.autosuggestions.enable = true;
-  programs.zsh.syntaxHighlighting.enable = true;
+  	programs.zsh.syntaxHighlighting.enable = true;
 
 	# Define a user account.
 	users.users.clemmie = {
@@ -68,6 +68,17 @@
 	};
 	#Allow Non-Foss
 	nixpkgs.config.allowUnfree = true;	
+    #SearXNG Search Engine
+	services.searx = {
+		enable = true;
+		settings = {
+			server = {
+                port = 8888;
+                bind_address = "127.0.0.1";
+                secret_key = "[INSERT A KEY OR WHATEVER]";
+			};
+        };
+    };
 	# Packages
 	environment.systemPackages = with pkgs; [
 		# System Tools
@@ -98,12 +109,13 @@
 		libreoffice #document suite editor
 		keepassxc # password manager
 		vlc #video 
-		librewolf #browser (use SearXNG as search engine)
+		
 
 		  #Productivity & Browsers
     	mmex #money manager 
 		brave #browser
-		qutebrowser #browser 
+		qutebrowser #browser
+		searxng #search engine
 
 			# Chat Apps & Games
 		vesktop #discord
