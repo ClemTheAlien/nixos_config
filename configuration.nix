@@ -7,18 +7,13 @@
 	[ # Include the results of the hardware scan.
 		./hardware-configuration.nix
 	];
-	#Update Kernel (fix audio)
-	boot.kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_12.override { argsOverride = { version = "6.12"; }; });
+	#Kernel
+	boot.kernelPackages = pkgs.linuxPackages_zen;
 	#Nvidia Support
 	hardware.graphics.enable = true;
 	services.xserver.videoDrivers = ["noveau"];
 	hardware.nvidia.open = true;
 	hardware.nvidia. nvidiaSettings = true;
-	hardware.nvidia.prime = {
-    		offload.enable = true;
-    		intelBusId = "PCI:0:2:0";
-    		nvidiaBusId = "PCI:1:0:0";
-  	};
  	# Bootloader.
 	boot.loader.systemd-boot.enable =true;
 	boot.loader.limine.style.wallpapers = [/home/clemmie/.backgrounds/boot.jpg];
