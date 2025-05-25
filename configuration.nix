@@ -16,13 +16,13 @@
 	hardware.nvidia. nvidiaSettings = true;
  	# Bootloader.
 	boot.loader.systemd-boot.enable =true;
-	boot.loader.limine.style.wallpapers = [/home/clemmie/.backgrounds/boot.jpg];
+	boot.loader.limine.style.wallpapers = [/home/clemmie/.extraConfig];
 	# Hostname
 	networking.hostName = "[CHANGE ME]";
 	# Enable networking
 	networking.networkmanager.enable = true;
   	#Timezone
-	time.timeZone = "[CHANGE ME]";
+	time.timeZone = "[CHANGE ME]]";
 	#Printing Daemon
 	services.printing.enable = true;
 	services.avahi = {
@@ -54,15 +54,26 @@
   programs.zsh.syntaxHighlighting.enable = true;
 
 	# Define a user account.
-	users.users.clemmie = {
+	users.users.clemmie = { #CHANGE ME and all instances of Clemmie
 		isNormalUser = true;
-		description = "clemmie";
+		description = "main user";
 		extraGroups = [ "networkmanager" "wheel" ];
 		packages = with pkgs; [];
 		shell = pkgs.zsh;
 	};
 	#Allow Non-Foss
 	nixpkgs.config.allowUnfree = true;	
+	    #SearXNG Search Engine
+	services.searx = {
+		enable = true;
+		settings = {
+			server = {
+                port = 8888;
+                bind_address = "127.0.0.1";
+                secret_key = "[INSERT A KEY OR WHATEVER]";
+			};
+        	};
+    	};
 	# Packages
 	environment.systemPackages = with pkgs; [
 		# System Tools
@@ -89,21 +100,18 @@
 		cava #audio visualizer
 
 		# Apps
-			# General Apps
-		libreoffice #document suite editor
-		keepassxc # password manager
-		vlc #video 
-		librewolf #browser (use SearXNG as search engine)
-
 		  #Productivity & Browsers
-    	mmex #money manager 
-		brave #browser
-		qutebrowser #browser 
+    		mmex #money manager 
+			librewolf #browser (use SearXNG as search engine)
+			keepassxc # password manager
+			logseq #note taking
 
-			# Chat Apps & Games
+			# Chat Apps, Games & Media
 		vesktop #discord
 		weechat #irc
 		lutris #game manager
+		vlc #video
+		libreoffice #document suite editor
 			
 			#Coding Tools
 		git # ver control
@@ -153,7 +161,6 @@
 		noto-fonts-emoji
 		fira-code
 		fira-code-symbols
-		alegreya
 	];
 
 	#Flatpak
@@ -176,4 +183,3 @@
 	hardware.bluetooth.enable = true; 
 	hardware.bluetooth.powerOnBoot = true;
 }
-
