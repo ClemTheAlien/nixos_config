@@ -17,7 +17,6 @@
  	# Bootloader.
 	boot.loader.systemd-boot.enable =true;
 	boot.loader.limine.style.wallpapers = [/home/clemmie/.extraConfig];
-	boot.loader.limine.extraConfig = {term_font = "/home/clemmie/Code/.extraConfig/Alegreya.zip";};
 	# Hostname
 	networking.hostName = "[CHANGE ME]";
 	# Enable networking
@@ -55,9 +54,9 @@
   programs.zsh.syntaxHighlighting.enable = true;
 
 	# Define a user account.
-	users.users.clemmie = {
+	users.users.clemmie = { #CHANGE ME and all instances of Clemmie
 		isNormalUser = true;
-		description = "clemmie";
+		description = "main user";
 		extraGroups = [ "networkmanager" "wheel" ];
 		packages = with pkgs; [];
 		shell = pkgs.zsh;

@@ -4,3 +4,33 @@
 - Move  `./extraConfig` to `~/.extraConfig` (change the absolute path if u have a user named other than clemmie in `configuration.nix`)
 - Then move on to the Manual Config section and complete each step
 - Finally delete the `assets` folder, `README.md` and this file and your done :)
+
+#TODO Configurations after Base Install
+- Install Flatpaks
+- Login to all accounts
+    - Steam
+    - PrismLauncher 
+    - Spotify
+    - Mullvad VPN
+    - Login on web browser to stuff
+- Configure KeepassXC
+- Configure Vscodium
+    - NixOS IDE 
+    - Gleam Theme
+    - Java support
+- Configure Librewolf
+    - Set Librewolf search engine to `localhost:8888`
+    - Add Bookmarks to LibreWolf
+- Set wallpaper
+    - `wal -i ~/.backgrounds/[IMAGE]`
+    - Waypaper
+- Configure Logseq
+    - Link Folder
+    - Evergreen theme
+    - Nord Theme
+    - Block Calendat
+    - Bullet Threading
+    - Tags
+    - PDF Export
+    - Journal Calendar
+- Profit :>
