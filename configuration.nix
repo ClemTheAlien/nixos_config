@@ -102,9 +102,9 @@
 		# Apps
 		  #Productivity & Browsers
     		mmex #money manager 
-				librewolf #browser (use SearXNG as search engine)
-				keepassxc # password manager
-				logseq #note taking
+			librewolf #browser (use SearXNG as search engine)
+			keepassxc # password manager
+			logseq #note taking
 
 			# Chat Apps, Games & Media
 		vesktop #discord
