@@ -51,7 +51,7 @@
 	#Default Shell (ZSH)
 	programs.zsh.enable = true; # Use script with dotfiles to install zsh plugins
 	programs.zsh.autosuggestions.enable = true;
-	programs.zsh.syntaxHighlighting.enable = true;
+  	programs.zsh.syntaxHighlighting.enable = true;
 
 	# Define a user account.
 	users.users.clemmie = { #CHANGE ME and all instances of Clemmie
@@ -72,8 +72,18 @@
                 bind_address = "127.0.0.1";
                 secret_key = "[INSERT A KEY OR WHATEVER]";
 			};
-        	};
-    	};
+        };
+    };
+	#AI in Web Browser 
+	services.ollama = {
+		enable = true;
+		acceleration = "cuda";
+	};
+	services.open-webui = {
+		enable = true;
+		port = 08080;
+	};
+
 	# Packages
 	environment.systemPackages = with pkgs; [
 		# System Tools
