@@ -4,12 +4,9 @@ These dotfiles require an exact or similar layout of my configuration.nix file i
 ![Configuration2](./assets/screenshot2.png)
 ## Warnings
 - I omitted my Timezone and Hostname in the config so make sure to edit that
-<<<<<<< HEAD
 - I have Unfree Packages enabled
 - I am on the 25.05 version of NixOS (Warbler)
 - I use ZSH instead of BASH and I use the autosuggestion and syntax higlighting plugins, in which I git clone to .zsh 
-=======
->>>>>>> reorganize
 
 > **Follow the Instructions.md file to install my dotfiles until I learn Home Manager and Flakes well enough.**
 
