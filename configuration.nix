@@ -102,7 +102,8 @@
 		waypaper #wallpapers
 		waybar #customizable bar
 
-		shutter #screenshot
+		flameshot #screenshot
+		webcamoid #webcam 
 		alacritty #terminal
 		fastfetch #fetch
 		pywal16 # colorscheme
