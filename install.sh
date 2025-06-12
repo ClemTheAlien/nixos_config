@@ -5,10 +5,11 @@ fi
 
 rm -rf ~/nixos_config/assets
 rm ~/nixos_config/README.md
-mv ~/nixos_config/.zshrc ~/
-mv ~/nixos_config/extraConfig ~/.extraConfig
-mv ~/nixos_config/* ~/.config/
-mv -f ~/nixos_config/configuration.nix /etc/nixos/
+cp -r ~/nixos_config/.zshrc ~
+cp -r ~/nixos_config/extraConfig ~/.extraConfig
+cp -r ~/nixos_config/configuration.nix /etc/nixos/
+cp -r ~/nixos_config/* ~/.config/
+
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub com.valvesoftware.Steam
@@ -17,7 +18,6 @@ flatpak install flathub com.spotify.Client
 flatpak install flathub com.github.tchx84.Flatseal
 
 rm -rf ~/nixos_config
-nixos-rebuild switch
 nixos-rebuild boot --install-bootloader
 
 echo "All Done :3"
