@@ -7,6 +7,9 @@
 
 #TODO Configurations after Base Install
 - Install Flatpaks
+    - Steam
+    - PrismLauncher
+    - Spotify
 - Login to all accounts
     - Steam
     - PrismLauncher 

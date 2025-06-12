@@ -13,7 +13,6 @@ These dotfiles require an exact or similar layout of my configuration.nix file i
 
 ## Flatpaks I Use 
 - Steam
-- Lutris
 - Flatseal
 - Spotify
 - Prism Launcher
