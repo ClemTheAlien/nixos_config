@@ -19,22 +19,26 @@ nixpkgs.overlays = [
 	[ # Include the results of the hardware scan.
 		./hardware-configuration.nix
 	];
-	#Kernel
-	boot.kernelPackages = pkgs.linuxPackages_zen;
+	#Update Kernel (fix audio)
+	boot.kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_12.override { argsOverride = { version = "6.12"; }; });
 	#Nvidia Support
 	hardware.graphics.enable = true;
 	services.xserver.videoDrivers = ["noveau"];
 	hardware.nvidia.open = true;
 	hardware.nvidia. nvidiaSettings = true;
+	hardware.nvidia.prime = {
+    		offload.enable = true;
+    		intelBusId = "PCI:0:2:0";
+    		nvidiaBusId = "PCI:1:0:0";
+  	};
  	# Bootloader.
 	boot.loader.systemd-boot.enable =true;
-	boot.loader.limine.style.wallpapers = [/home/clemmie/.extraConfig];
 	# Hostname
 	networking.hostName = "[CHANGE ME]";
 	# Enable networking
 	networking.networkmanager.enable = true;
   	#Timezone
-	time.timeZone = "[CHANGE ME]]";
+	time.timeZone = "[CHANGE ME]";
 	#Printing Daemon
 	services.printing.enable = true;
 	services.avahi = {
@@ -42,10 +46,6 @@ nixpkgs.overlays = [
 	  nssmdns4 = true;
 	  openFirewall = true;
 	};
-	# Virt Manager (Only Qemu/KVM hypervisor) 
-	programs.virt-manager.enable = true;
-	users.groups.libvirtd.members = ["clemmie"];
-	virtualisation.libvirtd.enable = true;
 
 	# Select internationalisation properties.
 	i18n.defaultLocale = "en_US.UTF-8";
@@ -62,40 +62,17 @@ nixpkgs.overlays = [
 	};
 	#Default Shell (ZSH)
 	programs.zsh.enable = true; # Use script with dotfiles to install zsh plugins
-	programs.zsh.autosuggestions.enable = true;
-  	programs.zsh.syntaxHighlighting.enable = true;
-
+		
 	# Define a user account.
-	users.users.clemmie = { #CHANGE ME and all instances of Clemmie
+	users.users.clemmie = {
 		isNormalUser = true;
-		description = "main user";
+		description = "clemmie";
 		extraGroups = [ "networkmanager" "wheel" ];
 		packages = with pkgs; [];
 		shell = pkgs.zsh;
 	};
 	#Allow Non-Foss
 	nixpkgs.config.allowUnfree = true;	
-	    #SearXNG Search Engine
-	services.searx = {
-		enable = true;
-		settings = {
-			server = {
-        port = 8888;
-        bind_address = "127.0.0.1";
-        secret_key = "[INSERT A KEY OR WHATEVER]";
-			};
-        };
-    };
-	#AI in Web Browser 
-	services.ollama = {
-		enable = true;
-		acceleration = "cuda";
-	};
-	services.open-webui = {
-		enable = true;
-		port = 08080;
-	};
-
 	# Packages
 	environment.systemPackages = with pkgs; [
 		# System Tools
@@ -114,34 +91,29 @@ nixpkgs.overlays = [
 		waypaper #wallpapers
 		waybar #customizable bar
 
-		flameshot #screenshot
-		webcamoid #webcam 
+		shutter #screenshot
 		alacritty #terminal
 		fastfetch #fetch
-		pywal16 # colorscheme
-		imagemagick #colorscheme backend
-		cava #audio visualizer
+		pywal # colorscheme
 
 		# Apps
-		  #Productivity & Browsers
-    	mmex #money manager 
-		librewolf #browser (use SearXNG as search engine)
+			# General Apps
+		libreoffice #document suite editor
 		keepassxc # password manager
-		logseq #note taking
+		vlc #video 
 
-			# Chat Apps, Games & Media
+		  #Productivity
+    emacs # Note editor
+
+			# Chat Apps
 		vesktop #discord
 		weechat #irc
-		lutris #game manager
-		vlc #video
-		libreoffice #document suite editor
 			
 			#Coding Tools
 		git # ver control
 		gitflow #git flow (enhanced ver control)
 		vscodium #IDE 
-		eclipses.eclipse-java #Java IDE 
-		cudatoolkit #CUDA Support
+
 			# CyberSec Tools
 		wireshark # packet sniffing
 		mullvad-vpn #VPN
@@ -159,7 +131,7 @@ nixpkgs.overlays = [
 		
 	];
 	# Sys Ver
-	system.stateVersion = "25.05";
+	system.stateVersion = "24.11";
 	
 	#SwayWM
 	programs.sway = {
@@ -168,7 +140,6 @@ nixpkgs.overlays = [
   	};	
 	services.displayManager = {
 		ly.enable = true;
-		ly.settings = {animation = "matrix";};
 	};
 
 	# File System Auto USB Mount
@@ -206,3 +177,4 @@ nixpkgs.overlays = [
 	hardware.bluetooth.enable = true; 
 	hardware.bluetooth.powerOnBoot = true;
 }
+
