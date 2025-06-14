@@ -25,7 +25,7 @@
     background: @color10;
     color: inherit;
 }
-#pulseaudio,#cpu,#battery, #memory,#clock, #custom-screenshot {
+#pulseaudio,#cpu,#battery, #memory,#clock{
     padding-left: 8px;
     padding-right: 8px;
 
