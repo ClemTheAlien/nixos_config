@@ -16,3 +16,4 @@ These dotfiles require an exact or similar layout of my configuration.nix file i
 - Flatseal
 - Spotify
 - Prism Launcher
+- Sober
