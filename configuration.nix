@@ -42,10 +42,13 @@ nixpkgs.overlays = [
 	  nssmdns4 = true;
 	  openFirewall = true;
 	};
-	# Virt Manager (Only Qemu/KVM hypervisor) 
+	# Virt Manager (QEMU/KVM Virt Machines) 
 	programs.virt-manager.enable = true;
 	users.groups.libvirtd.members = ["clemmie"];
 	virtualisation.libvirtd.enable = true;
+	#Virtual Box
+	virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "clemmie" ];
 
 	# Select internationalisation properties.
 	i18n.defaultLocale = "en_US.UTF-8";
