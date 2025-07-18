@@ -152,6 +152,7 @@ nixpkgs.overlays = [
 			#Electrical Engineering Tools
 		kicad #pcb maker
 		logisim-evolution #pcb maker
+		ghidra-bin #reverse engineering
 
 			# Art Tools
 		krita #picture manipulation tool
