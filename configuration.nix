@@ -27,8 +27,8 @@ nixpkgs.overlays = [
 	hardware.nvidia.open = true;
 	hardware.nvidia. nvidiaSettings = true;
  	# Bootloader.
-	boot.loader.systemd-boot.enable =true;
-	boot.loader.limine.style.wallpapers = [/home/clemmie/.extraConfig];
+	boot.loader.limine.enable =true;
+	boot.loader.limine.style.wallpapers = [/home/clemmie/.extraConfig/boot.jpg];
 	# Hostname
 	networking.hostName = "[CHANGE ME]";
 	# Enable networking
