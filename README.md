@@ -10,12 +10,13 @@ These dotfiles require an exact or similar layout of my configuration.nix file i
 - I omitted my Timezone and Hostname in the config so make sure to edit that
 - I have Unfree Packages enabled
 - I am on the 25.05 version of NixOS (Warbler)
-- I use ZSH instead of BASH and I use the autosuggestion and syntax higlighting plugins, in which I git clone to .zsh 
+- I use ZSH instead of BASH and I use the autosuggestion and syntax higlighting plugins.
 
-> **Follow the Instructions.md file to install my dotfiles until I learn Home Manager and Flakes well enough.**
+> **Follow the Instructions.md file or use the install script**
 
 ## Flatpaks I Use 
 - Steam
 - Flatseal
 - Spotify
 - Prism Launcher
+- Sober
