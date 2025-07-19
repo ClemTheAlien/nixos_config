@@ -2,9 +2,11 @@
 These dotfiles require an exact or similar layout of my configuration.nix file in order to function. These dots should be applicable across most distros if you download the applications listed in my configuration.nix file while also copying the folders to the .config folder. Warning that these dots were made with NixOS in mind.
 ![Screenshot](./assets/screenshot1.png)
 ![Screenshot](./assets/screenshot2.png)
+
+
 ![Video](./assets/dotfiles_video.mp4)
 
-** Music for Video is from https://pixabay.com/music/beats-dreamy-lofi-music-no-copyright-375783/ and the screenshot is from the game ENA: Dream BBQ**
+Music for Video is from https://pixabay.com/music/beats-dreamy-lofi-music-no-copyright-375783/ and the screenshot is from the game ENA: Dream BBQ
 > **Look in `assets` folder for more screenshots**
 ## Warnings
 - I omitted my Timezone and Hostname in the config so make sure to edit that
@@ -20,3 +22,4 @@ These dotfiles require an exact or similar layout of my configuration.nix file i
 - Spotify
 - Prism Launcher
 - Sober
+- Openshot
