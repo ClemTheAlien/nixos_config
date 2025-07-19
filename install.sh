@@ -66,16 +66,16 @@ echo "
                                         @@@@@@@@@@@@@@@@@@@@@@@@@&BPJ7?????????????????????????????????????7777J5B@@@@@@@@@@@@@@@@@@@@@@@@@@
                                         @@@@@@@@@@@@@@@@@@@@@@@@@@@@#B##G??????????????????????????????????G###&@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 "
-mv .config ~/.config
-mv .extraConfig ~/.extraConfig
+cp .config ~/.config
+cp .extraConfig ~/.extraConfig
 rm -rf assets
-rm Instructions.md
 rm README.md
-mv .zshrc ~/.zshrc
-mv ./configuration.nix /etc/nixos/
+cp .zshrc ~/.zshrc
+cp ./configuration.nix /etc/nixos/
 
 echo "
 #TODO Configurations after Base Install
+- Delete this folder
 - Install Flatpaks
     - Steam
     - PrismLauncher
