@@ -28,7 +28,7 @@
     },
     "custom/screenshot":{
     "format": "{icon}",
-    "on-click": "flameshot gui -c",
+    "on-click": "shutter",
     "format-icons":["⎙"],
     },
 }
