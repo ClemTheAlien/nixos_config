@@ -9,7 +9,7 @@ These dotfiles require an exact or similar layout of my configuration.nix file i
 - I am on the 25.05 version of NixOS (Warbler)
 - I use ZSH instead of BASH and I use the autosuggestion and syntax higlighting plugins, in which I git clone to .zsh 
 
-> **Follow the Instructions.md file to install my dotfiles until I learn Home Manager and Flakes well enough.**
+> **Use my install script or follow the Instructions.md. Remeber to start the script on a fresh NixOS install then rebuild boot and switch**
 
 ## Flatpaks I Use 
 - Steam
