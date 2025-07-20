@@ -29,6 +29,7 @@ nixpkgs.overlays = [
  	# Bootloader.
 	boot.loader.limine.enable =true;
 	boot.loader.limine.style.wallpapers = [/home/clemmie/.extraConfig/boot.jpg];
+	boot.loader.efi.canTouchEfiVariables = true;
 	# Hostname
 	networking.hostName = "[CHANGE ME]";
 	# Enable networking
@@ -48,7 +49,7 @@ nixpkgs.overlays = [
 	virtualisation.libvirtd.enable = true;
 	#Virtual Box
 	virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "clemmie" ];
+  	users.extraGroups.vboxusers.members = [ "clemmie" ];
 
 	# Select internationalisation properties.
 	i18n.defaultLocale = "en_US.UTF-8";
@@ -117,11 +118,11 @@ nixpkgs.overlays = [
 		waypaper #wallpapers
 		waybar #customizable bar
 
-		flameshot #screenshot
+		shutter #screenshot
 		webcamoid #webcam 
 		alacritty #terminal
 		fastfetch #fetch
-		pywal16 # colorscheme
+		pywal # colorscheme
 		imagemagick #colorscheme backend
 		cava #audio visualizer
 
@@ -165,11 +166,12 @@ nixpkgs.overlays = [
 	# Sys Ver
 	system.stateVersion = "25.05";
 	
-	#SwayWM
-	programs.sway = {
- 		enable = true;
- 		wrapperFeatures.gtk = true;
-  	};	
+	#Hyprland
+	programs.hyprland = {
+    	enable = true;
+		xwayland.enable = true;
+	};
+
 	services.displayManager = {
 		ly.enable = true;
 		ly.settings = {animation = "matrix";};
@@ -188,6 +190,7 @@ nixpkgs.overlays = [
 		noto-fonts-emoji
 		fira-code
 		fira-code-symbols
+		departure-mono
 	];
 
 	#Flatpak
