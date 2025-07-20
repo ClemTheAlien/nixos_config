@@ -1,4 +1,4 @@
-#!/bin/bash
+
 current_dir=$(basename "$PWD")
 if [[ $(id -u) -ne 0 ]]; then
     echo "This script is not running as root. Please run with sudo."
@@ -66,13 +66,14 @@ echo "
                                         @@@@@@@@@@@@@@@@@@@@@@@@@&BPJ7?????????????????????????????????????7777J5B@@@@@@@@@@@@@@@@@@@@@@@@@@
                                         @@@@@@@@@@@@@@@@@@@@@@@@@@@@#B##G??????????????????????????????????G###&@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 "
-cp .config ~/.config
-cp .extraConfig ~/.extraConfig
+sleep 3
+cp -r .config ~/.config
+cp -r .extraConfig ~/.extraConfig
 rm -rf assets
-rm README.md
+rm ./README.md
 cp .zshrc ~/.zshrc
 cp ./configuration.nix /etc/nixos/
-
+sleep 3
 echo "
 #TODO Configurations after Base Install
 - Delete this folder
@@ -92,7 +93,7 @@ echo "
     - Gleam Theme
     - Java support
 - Configure Librewolf
-    - Set Librewolf search engine to `localhost:8888`
+    - Set Librewolf search engine to localhost:8888
     - Add Bookmarks to LibreWolf
 - Set wallpaper
     - `wal -i ~/.backgrounds/[IMAGE]`
