@@ -1,9 +1,5 @@
 
 current_dir=$(basename "$PWD")
-if [[ $(id -u) -ne 0 ]]; then
-    echo "This script is not running as root. Please run with sudo."
-    exit 1
-fi
 if [ "$current_dir" != "nixos_config" ]; then
   echo "Error: You are not in the 'nixos_config' directory."
   echo "Please navigate to the 'nixos_config' folder before running this script."
@@ -67,45 +63,20 @@ echo "
                                         @@@@@@@@@@@@@@@@@@@@@@@@@@@@#B##G??????????????????????????????????G###&@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 "
 sleep 3
+rm -r ~/.config
 cp -r .config ~/.config
 cp -r .extraConfig ~/.extraConfig
-rm -rf assets
-rm ./README.md
 cp .zshrc ~/.zshrc
-cp ./configuration.nix /etc/nixos/
+sudo cp ./configuration.nix /etc/nixos/
 sleep 3
 echo "
 #TODO Configurations after Base Install
 - Delete this folder
 - Install Flatpaks
-    - Steam
-    - PrismLauncher
-    - Spotify
 - Login to all accounts
-    - Steam
-    - PrismLauncher 
-    - Spotify
-    - Mullvad VPN
-    - Login on web browser to stuff
 - Configure KeepassXC
 - Configure Vscodium
-    - NixOS IDE 
-    - Gleam Theme
-    - Java support
-- Configure Librewolf
-    - Set Librewolf search engine to localhost:8888
-    - Add Bookmarks to LibreWolf
+- Configure Search Engine
 - Set wallpaper
-    - `wal -i ~/.backgrounds/[IMAGE]`
-    - Waypaper
-- Configure Logseq
-    - Link Folder
-    - Evergreen theme
-    - Nord Theme
-    - Block Calendat
-    - Bullet Threading
-    - Tags
-    - PDF Export
-    - Journal Calendar
 - Profit :>
 "

@@ -10,14 +10,7 @@ These dotfiles require an exact or similar layout of my configuration.nix file i
 
 Music for Video is from https://pixabay.com/music/beats-dreamy-lofi-music-no-copyright-375783/ and the screenshot is from the game ENA: Dream BBQ
 
-> **Look in `assets` folder for more screenshots**
-## Warnings
-- I omitted my Timezone and Hostname in the config so make sure to edit that
-- I have Unfree Packages enabled
-- I am on the 25.05 version of NixOS (Warbler)
-- I use ZSH instead of BASH and I use the autosuggestion and syntax higlighting plugins, in which I git clone to .zsh 
-
-> **Use my install script or follow the Instructions.md. Remeber to start the script on a fresh NixOS install then rebuild boot and switch**
+> **Use my install script. Remeber to start the script on a fresh NixOS install then rebuild boot and switch**
 
 ## Flatpaks I Use 
 - Steam
@@ -26,3 +19,4 @@ Music for Video is from https://pixabay.com/music/beats-dreamy-lofi-music-no-cop
 - Prism Launcher
 - Sober
 - Openshot
+- Dino

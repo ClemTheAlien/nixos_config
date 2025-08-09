@@ -31,11 +31,11 @@ nixpkgs.overlays = [
 	boot.loader.limine.style.wallpapers = [/home/clemmie/.extraConfig/boot.jpg];
 	boot.loader.efi.canTouchEfiVariables = true;
 	# Hostname
-	networking.hostName = "[CHANGE ME]";
+	networking.hostName = "[Change ME]";
 	# Enable networking
 	networking.networkmanager.enable = true;
   	#Timezone
-	time.timeZone = "[CHANGE ME]]";
+	time.timeZone = "[CHANGE ME]";
 	#Printing Daemon
 	services.printing.enable = true;
 	services.avahi = {
@@ -49,7 +49,9 @@ nixpkgs.overlays = [
 	virtualisation.libvirtd.enable = true;
 	#Virtual Box
 	virtualisation.virtualbox.host.enable = true;
-  	users.extraGroups.vboxusers.members = [ "clemmie" ];
+  users.extraGroups.vboxusers.members = [ "clemmie" ];
+	#Docker
+	virtualisation.docker.enable = true;
 
 	# Select internationalisation properties.
 	i18n.defaultLocale = "en_US.UTF-8";
@@ -73,13 +75,13 @@ nixpkgs.overlays = [
 	users.users.clemmie = { #CHANGE ME and all instances of Clemmie
 		isNormalUser = true;
 		description = "main user";
-		extraGroups = [ "networkmanager" "wheel" ];
+		extraGroups = [ "networkmanager" "wheel" "docker"];
 		packages = with pkgs; [];
 		shell = pkgs.zsh;
 	};
 	#Allow Non-Foss
 	nixpkgs.config.allowUnfree = true;	
-	    #SearXNG Search Engine
+	#SearXNG Search Engine
 	services.searx = {
 		enable = true;
 		settings = {
@@ -90,15 +92,6 @@ nixpkgs.overlays = [
 			};
         };
     };
-	#AI in Web Browser 
-	services.ollama = {
-		enable = true;
-		acceleration = "cuda";
-	};
-	services.open-webui = {
-		enable = true;
-		port = 08080;
-	};
 
 	# Packages
 	environment.systemPackages = with pkgs; [
@@ -112,13 +105,13 @@ nixpkgs.overlays = [
 		mako #notifications
 		pcmanfm #file explorer
 		feh #image viewer
-		swaylock-effects #lockscreen
+		swayfx #sway effects
 		rofi-wayland # rofi 
 		wl-clipboard #clipboard
 		waypaper #wallpapers
 		waybar #customizable bar
 
-		shutter #screenshot
+		flameshot #screenshot
 		webcamoid #webcam 
 		alacritty #terminal
 		fastfetch #fetch
@@ -128,7 +121,7 @@ nixpkgs.overlays = [
 
 		# Apps
 		  #Productivity & Browsers
-    	mmex #money manager 
+    mmex #money manager 
 		librewolf #browser (use SearXNG as search engine)
 		keepassxc # password manager
 		logseq #note taking
@@ -143,6 +136,8 @@ nixpkgs.overlays = [
 			#Coding Tools
 		git # ver control
 		gitflow #git flow (enhanced ver control)
+		gh #github
+		act #github actions
 		vscodium #IDE 
 		eclipses.eclipse-java #Java IDE 
 		cudatoolkit #CUDA Support
@@ -167,9 +162,9 @@ nixpkgs.overlays = [
 	system.stateVersion = "25.05";
 	
 	#Hyprland
-	programs.hyprland = {
+	programs.sway = {
     	enable = true;
-		xwayland.enable = true;
+			wrapperFeatures.gtk = true;
 	};
 
 	services.displayManager = {
