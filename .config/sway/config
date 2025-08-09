@@ -179,3 +179,9 @@ titlebar_padding 1
 titlebar_border_thickness 0
 gaps inner 10
 gaps outer 10
+corner_radius 10
+layer_effects "notifications" {
+  blur enable;
+  blur_passes 2;
+  blur_radius 5;
+}

@@ -1,7 +1,7 @@
 {
     "layer": "top",
-    "modules-left": ["hyprland/workspaces", "sway/mode"],
-    "modules-center": ["hyprland/window"],
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
     "modules-right": ["cpu","memory","pulseaudio","custom/screenshot","battery","clock" ],
     "hyprland/window": {
         "max-length":50,
