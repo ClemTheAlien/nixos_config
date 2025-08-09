@@ -41,7 +41,7 @@ exec waypaper --restore
     bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'Do you really want to exit sway?' -B 'Yes :3' 'swaymsg exit'
+    bindsym $mod+Shift+e exec shutdown now
 #
 # Moving around:
 #
