@@ -41,7 +41,7 @@ exec waypaper --restore
     bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'Do you really want to exit sway?' -B 'Yes :3' 'swaymsg exit'
+    bindsym $mod+Shift+e exec shutdown now
 #
 # Moving around:
 #
@@ -179,3 +179,9 @@ titlebar_padding 1
 titlebar_border_thickness 0
 gaps inner 10
 gaps outer 10
+corner_radius 10
+layer_effects "notifications" {
+  blur enable;
+  blur_passes 2;
+  blur_radius 5;
+}

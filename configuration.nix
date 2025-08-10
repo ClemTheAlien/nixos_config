@@ -27,14 +27,15 @@ nixpkgs.overlays = [
 	hardware.nvidia.open = true;
 	hardware.nvidia. nvidiaSettings = true;
  	# Bootloader.
-	boot.loader.systemd-boot.enable =true;
-	boot.loader.limine.style.wallpapers = [/home/clemmie/.extraConfig];
+	boot.loader.limine.enable =true;
+	boot.loader.limine.style.wallpapers = [/home/clemmie/.extraConfig/boot.jpg];
+	boot.loader.efi.canTouchEfiVariables = true;
 	# Hostname
-	networking.hostName = "[CHANGE ME]";
+	networking.hostName = "[Change ME]";
 	# Enable networking
 	networking.networkmanager.enable = true;
   	#Timezone
-	time.timeZone = "[CHANGE ME]]";
+	time.timeZone = "[CHANGE ME]";
 	#Printing Daemon
 	services.printing.enable = true;
 	services.avahi = {
@@ -42,10 +43,15 @@ nixpkgs.overlays = [
 	  nssmdns4 = true;
 	  openFirewall = true;
 	};
-	# Virt Manager (Only Qemu/KVM hypervisor) 
+	# Virt Manager (QEMU/KVM Virt Machines) 
 	programs.virt-manager.enable = true;
 	users.groups.libvirtd.members = ["clemmie"];
 	virtualisation.libvirtd.enable = true;
+	#Virtual Box
+	virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "clemmie" ];
+	#Docker
+	virtualisation.docker.enable = true;
 
 	# Select internationalisation properties.
 	i18n.defaultLocale = "en_US.UTF-8";
@@ -69,13 +75,13 @@ nixpkgs.overlays = [
 	users.users.clemmie = { #CHANGE ME and all instances of Clemmie
 		isNormalUser = true;
 		description = "main user";
-		extraGroups = [ "networkmanager" "wheel" ];
+		extraGroups = [ "networkmanager" "wheel" "docker"];
 		packages = with pkgs; [];
 		shell = pkgs.zsh;
 	};
 	#Allow Non-Foss
 	nixpkgs.config.allowUnfree = true;	
-	    #SearXNG Search Engine
+	#SearXNG Search Engine
 	services.searx = {
 		enable = true;
 		settings = {
@@ -86,15 +92,6 @@ nixpkgs.overlays = [
 			};
         };
     };
-	#AI in Web Browser 
-	services.ollama = {
-		enable = true;
-		acceleration = "cuda";
-	};
-	services.open-webui = {
-		enable = true;
-		port = 08080;
-	};
 
 	# Packages
 	environment.systemPackages = with pkgs; [
@@ -108,7 +105,7 @@ nixpkgs.overlays = [
 		mako #notifications
 		pcmanfm #file explorer
 		feh #image viewer
-		swaylock-effects #lockscreen
+		swayfx #sway effects
 		rofi-wayland # rofi 
 		wl-clipboard #clipboard
 		waypaper #wallpapers
@@ -118,13 +115,13 @@ nixpkgs.overlays = [
 		webcamoid #webcam 
 		alacritty #terminal
 		fastfetch #fetch
-		pywal16 # colorscheme
+		pywal # colorscheme
 		imagemagick #colorscheme backend
 		cava #audio visualizer
 
 		# Apps
 		  #Productivity & Browsers
-    	mmex #money manager 
+    mmex #money manager 
 		librewolf #browser (use SearXNG as search engine)
 		keepassxc # password manager
 		logseq #note taking
@@ -139,6 +136,8 @@ nixpkgs.overlays = [
 			#Coding Tools
 		git # ver control
 		gitflow #git flow (enhanced ver control)
+		gh #github
+		act #github actions
 		vscodium #IDE 
 		eclipses.eclipse-java #Java IDE 
 		cudatoolkit #CUDA Support
@@ -149,6 +148,7 @@ nixpkgs.overlays = [
 			#Electrical Engineering Tools
 		kicad #pcb maker
 		logisim-evolution #pcb maker
+		ghidra-bin #reverse engineering
 
 			# Art Tools
 		krita #picture manipulation tool
@@ -161,11 +161,12 @@ nixpkgs.overlays = [
 	# Sys Ver
 	system.stateVersion = "25.05";
 	
-	#SwayWM
+	#Hyprland
 	programs.sway = {
- 		enable = true;
- 		wrapperFeatures.gtk = true;
-  	};	
+    	enable = true;
+			wrapperFeatures.gtk = true;
+	};
+
 	services.displayManager = {
 		ly.enable = true;
 		ly.settings = {animation = "matrix";};
@@ -184,6 +185,7 @@ nixpkgs.overlays = [
 		noto-fonts-emoji
 		fira-code
 		fira-code-symbols
+		departure-mono
 	];
 
 	#Flatpak
