@@ -4,11 +4,7 @@ These dotfiles require an exact or similar layout of my configuration.nix file i
 
 ![Screenshot](./assets/screenshot1.png)
 ![Screenshot](./assets/screenshot2.png)
-
-
-![Video](./assets/dotfiles_video.mp4)
-
-Music for Video is from https://pixabay.com/music/beats-dreamy-lofi-music-no-copyright-375783/ and the screenshot is from the game ENA: Dream BBQ
+![Screenshot](./assets/screenshot3.png)
 
 > **Use my read the additional.md then use the install script. Remeber to start the script on a fresh NixOS install then rebuild boot and switch**
 

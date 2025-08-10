@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["cpu","memory","pulseaudio","custom/screenshot","battery","clock" ],
+    "modules-right": ["cpu","memory","pulseaudio","custom/screenshot","custom/screenshot2","battery","clock" ],
     "hyprland/window": {
         "max-length":50,
     },
@@ -28,7 +28,12 @@
     },
     "custom/screenshot":{
     "format": "{icon}",
-    "on-click": "shutter",
+    "on-click": "flameshot gui -c",
     "format-icons":["⎙"],
+    },
+    "custom/screenshot2":{
+    "format": "{icon}",
+    "on-click": "flameshot gui",
+    "format-icons":["⎙/"],
     },
 }
