@@ -10,7 +10,7 @@ These dotfiles require an exact or similar layout of my configuration.nix file i
 
 Music for Video is from https://pixabay.com/music/beats-dreamy-lofi-music-no-copyright-375783/ and the screenshot is from the game ENA: Dream BBQ
 
-> **Use my install script. Remeber to start the script on a fresh NixOS install then rebuild boot and switch**
+> **Use my read the additional.md then use the install script. Remeber to start the script on a fresh NixOS install then rebuild boot and switch**
 
 ## Flatpaks I Use 
 - Steam
