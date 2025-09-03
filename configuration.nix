@@ -69,7 +69,7 @@ nixpkgs.overlays = [
 	#Default Shell (ZSH)
 	programs.zsh.enable = true; # Use script with dotfiles to install zsh plugins
 	programs.zsh.autosuggestions.enable = true;
-  	programs.zsh.syntaxHighlighting.enable = true;
+  programs.zsh.syntaxHighlighting.enable = true;
 
 	# Define a user account.
 	users.users.clemmie = { #CHANGE ME and all instances of Clemmie
@@ -92,6 +92,12 @@ nixpkgs.overlays = [
 			};
         };
     };
+
+	#Steam 
+  programs.steam= {
+    enable = true;
+  };
+  hardware.steam-hardware.enable = true;
 
 	# Packages
 	environment.systemPackages = with pkgs; [
@@ -224,7 +230,7 @@ nixpkgs.overlays = [
   "text/html" = "codium.desktop";
   "application/javascript" = "codium.desktop";
 	};
-	
+
 	#Audio (Pipewire)
 	services.pipewire = {
 		enable = true;
