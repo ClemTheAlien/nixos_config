@@ -18,18 +18,20 @@ nixpkgs.overlays = [
 	imports =
 	[ # Include the results of the hardware scan.
 		./hardware-configuration.nix
-		./modules/kernel.nix
-		./modules/nvidia.nix
-		./modules/printing.nix
-		./modules/virtualization.nix
-		./modules/zsh.nix
-		./modules/sway.nix
-		./modules/ly.nix
-		./modules/fonts.nix
-		./modules/xdg.nix
-		./modules/bluetooth.nix
-		./modules/pipewire.nix
-		./modules/flatpak.nix
+		./modules/System/Kernel/kernel.nix
+		./modules/System/Graphics/nvidia.nix
+		./modules/System/Daemons/printing.nix
+		./modules/Services/virtualization.nix
+		./modules/System/Shell/zsh.nix
+		./modules/Desktop/sway.nix
+		./modules/System/Greeters/ly.nix
+		./modules/System/Etc/fonts.nix
+		./modules/System/Daemons/xdg.nix
+		./modules/System/Daemons/bluetooth.nix
+		./modules/System/Daemons/pipewire.nix
+		./modules/Pkgs/flatpak.nix
+		./modules/Services/searxng.nix
+		./modules/Services/steam.nix
 	];
 	# Hostname
 	networking.hostName = "[Change ME]";
