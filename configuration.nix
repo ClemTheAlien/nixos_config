@@ -22,7 +22,7 @@ nixpkgs.overlays = [
 		./modules/System/Graphics/nvidia.nix
 		./modules/System/Daemons/printing.nix
 		./modules/Services/virtualization.nix
-		./modules/System/Shell/zsh.nix
+		./modules/System/Shells/zsh.nix
 		./modules/Desktop/sway.nix
 		./modules/System/Greeters/ly.nix
 		./modules/System/Etc/fonts.nix
@@ -32,6 +32,7 @@ nixpkgs.overlays = [
 		./modules/Pkgs/flatpak.nix
 		./modules/Services/searxng.nix
 		./modules/Services/steam.nix
+		./modules/System/Bootloaders/systemdboot.nix
 	];
 	# Hostname
 	networking.hostName = "[Change ME]";
