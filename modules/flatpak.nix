@@ -1,4 +1,5 @@
-	#Flatpak
+	{ config, pkgs, ... }:{
+  #Flatpak
 	services.flatpak.enable = true;
 		xdg.portal = {
 			enable = true;
@@ -7,3 +8,4 @@
 				xdg-desktop-portal-gtk
 		];
 	};
+  }

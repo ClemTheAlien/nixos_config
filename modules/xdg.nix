@@ -1,3 +1,4 @@
+	{ config, pkgs, ... }: {
 xdg.mime.defaultApplications = {
   # Images with feh
   "image/jpeg" = "feh.desktop";
@@ -24,3 +25,4 @@ xdg.mime.defaultApplications = {
   "text/html" = "codium.desktop";
   "application/javascript" = "codium.desktop";
 	};
+  }

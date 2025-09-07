@@ -1,4 +1,5 @@
-	#Fonts
+	{ config, pkgs, ... }:{
+  #Fonts
 	fonts.packages = with pkgs; [
 		noto-fonts
 		noto-fonts-cjk-sans
@@ -7,3 +8,4 @@
 		fira-code-symbols
 		departure-mono
 	];
+  }

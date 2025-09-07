@@ -1,4 +1,5 @@
-	#SearXNG Search Engine
+		{ config, pkgs, ... }:{
+  #SearXNG Search Engine
 	services.searx = {
 		enable = true;
 		settings = {
@@ -9,3 +10,4 @@
 			};
         };
     };
+    }
