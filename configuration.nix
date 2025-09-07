@@ -28,7 +28,7 @@ nixpkgs.overlays = [
 		./modules/fonts.nix
 		./modules/xdg.nix
 		./modules/bluetooth.nix
-		./moudles/pipewire.nix
+		./modules/pipewire.nix
 		./modules/flatpak.nix
 	];
 	# Hostname
