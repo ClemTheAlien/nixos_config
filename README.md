@@ -8,9 +8,7 @@ These dotfiles require an exact or similar layout of my configuration.nix file i
 > **Use my read the additional.md then use the install script. Remeber to start the script on a fresh NixOS install then rebuild boot and switch**
 
 ## Flatpaks I Use 
-- Steam
 - Flatseal
-- Spotify
 - Prism Launcher
 - Sober
 - Openshot

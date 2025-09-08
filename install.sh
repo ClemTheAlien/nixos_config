@@ -72,7 +72,6 @@ sleep 3
 echo "
 #TODO Configurations after Base Install
 - Delete this folder
-- Install Flatpaks
 - Login to all accounts
 - Configure KeepassXC
 - Configure Vscodium
