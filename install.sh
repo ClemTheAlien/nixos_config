@@ -66,6 +66,7 @@ sleep 3
 rm -r ~/.config
 cp -r .config ~/.config
 cp -r .extraConfig ~/.extraConfig
+cp -r modules /etc/nixos/modules
 cp .zshrc ~/.zshrc
 sudo cp ./configuration.nix /etc/nixos/
 sleep 3

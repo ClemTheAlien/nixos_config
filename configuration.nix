@@ -35,11 +35,11 @@ nixpkgs.overlays = [
 		./modules/System/Bootloaders/systemdboot.nix
 	];
 	# Hostname
-	networking.hostName = "[Change ME]";
+	networking.hostName = "blackmesa";
 	# Enable networking
 	networking.networkmanager.enable = true;
   	#Timezone
-	time.timeZone = "[CHANGE ME]";
+	time.timeZone = "America/Chicago";
 
 	# Select internationalisation properties.
 	i18n.defaultLocale = "en_US.UTF-8";
@@ -65,10 +65,12 @@ nixpkgs.overlays = [
 	};
 	#Allow Non-Foss
 	nixpkgs.config.allowUnfree = true;	
-
+	#Flakes
+	nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
 	# Packages
 	environment.systemPackages = with pkgs; [
 		# System Tools
+		home-manager
 		bluez #bluetooth
 		bluez-tools #bluetooth
 		blueman #bluetooth gui
@@ -91,44 +93,6 @@ nixpkgs.overlays = [
 		pywal # colorscheme
 		imagemagick #colorscheme backend
 		cava #audio visualizer
-
-		# Apps
-		  #Productivity & Browsers
-    mmex #money manager 
-		librewolf #browser (use SearXNG as search engine)
-		keepassxc # password manager
-		logseq #note taking
-
-			# Chat Apps, Games & Media
-		vesktop #discord
-		weechat #irc
-		lutris #game manager
-		vlc #video
-		libreoffice #document suite editor
-			
-			#Coding Tools
-		git # ver control
-		gitflow #git flow (enhanced ver control)
-		gh #github
-		act #github actions
-		vscodium #IDE 
-		eclipses.eclipse-java #Java IDE 
-		cudatoolkit #CUDA Support
-			# CyberSec Tools
-		wireshark # packet sniffing
-		mullvad-vpn #VPN
-		
-			#Electrical Engineering Tools
-		kicad #pcb maker
-		logisim-evolution #pcb maker
-		ghidra-bin #reverse engineering
-
-			# Art Tools
-		krita #picture manipulation tool
-		obs-studio #video recording software
-		handbrake #video compressor
-		curtail #image compressor
-		metadata-cleaner #cleans metadata
 		
 	];
 	# Sys Ver
@@ -140,3 +104,4 @@ nixpkgs.overlays = [
 	services.devmon.enable = true;
 
 }
+
