@@ -109,40 +109,27 @@
 
   programs.fastfetch = {
     enable = true;
+    
     settings = {
+      
       modules = [
         "title"
         "separator"
-        "os" 
+        "os"
         "host"
         "kernel"
+        "uptime"
         "packages"
         "shell"
-        "display"
-        "wm"
         "terminal"
-        "terminalfont"
         "cpu"
         "gpu"
         "memory"
+        "local_ip"
         "disk"
+        "break"
         "colors"
       ];
-
-      logo = {
-        type = "none";
-      };
-
-      display = {
-        compact = false;
-        output = "standard";
-      };
-
-      color = {
-        title = "blue";
-        keys = "green";
-        values = "white";
-      };
     };
   };
 
@@ -298,72 +285,96 @@
 
   programs.waybar = {
     enable = true;
-    
-    settings = {
-      mainBar = {
-        layer = "top";
-        modules-left = [ "sway/workspaces" "sway/mode" ];
-        modules-center = [ "sway/window" ];
-        modules-right = [ "cpu" "memory" "pulseaudio" "battery" "clock" ];
-        
-        "sway/window" = {
-          max-length = 50;
-        };
-        
-        battery = {
-          format = "{capacity}% {icon}";
-          format-icons = [ "⚡︎" ];
-        };
-        
-        clock = {
-          format = "{:%H:%M}";
-          tooltip-format = "{:%Y-%m-%d}";
-        };
-        
-        cpu = {
-          format = "{usage}%";
-        };
-        
-        memory = {
-          format = "Mem:{percentage}%";
-        };
-        
-        pulseaudio = {
-          format = "Vol: {volume}%";
-        };
-      };
-    };
-    
+    systemd.enable = true;
     style = ''
+      @import "/home/clemmie/.cache/wal/colors-waybar.css";
+      
       * {
-        border: none;
-        border-radius: 0;
-        font-family: "Departure Mono";
-        font-size: 10px;
-        min-height: 0;
+          border: none;
+          border-radius: 0;
+          font-family: Fira Code;
+          font-size: 16px;
+          min-height: 0;
+          color: @color7;
       }
       
       window#waybar {
-        background: rgba(0, 0, 0, 0.8);
-        color: #ffffff;
+          background-color: transparent;
+      }
+      
+      #workspaces button:first-child {
+          border-left: 0;
       }
       
       #workspaces button {
-        padding: 0 5px;
-        background: transparent;
-        color: #ffffff;
-        border-bottom: 3px solid transparent;
+          padding-left: 10px;
+          padding-right: 10px;
+          background-color: @color5;
+          color: inherit;
+          font-weight: 600;
       }
-      
+
       #workspaces button.focused {
-        background: #64727D;
-        border-bottom: 3px solid #ffffff;
+          background: @color10;
+          color: inherit;
       }
       
-      #clock, #battery, #cpu, #memory, #pulseaudio {
-        padding: 0 6px;
-        margin: 0 3px;
+      #pulseaudio, #cpu, #battery, #memory, #clock, #custom-screenshot, #custom-screenshot2 {
+          padding-left: 8px;
+          padding-right: 8px;
+          background-color: @color10;
+          color: inherit;
+          font-weight: 600;
+          border-radius: 25px;
       }
     '';
+    settings = {
+      mainBar = {
+        layer = "top";
+        "modules-left" = [ "sway/workspaces" "sway/mode" ];
+        "modules-center" = [ "sway/window" ];
+        "modules-right" = [ "cpu" "memory" "pulseaudio" "custom/screenshot" "custom/screenshot2" "battery" "clock" ];
+        
+        "hyprland/window" = {
+          "max-length" = 50;
+        };
+        
+        "battery" = {
+          "format" = "{capacity}% {icon}";
+          "format-icons" = [ "⚡︎" ];
+        };
+        
+        "clock" = {
+          "format" = "{:%H:%M}";
+          "tooltip-format" = "{:%Y-%m-%d}";
+        };
+
+        "cpu" = {
+          "format" = "{icon0} {icon1} {icon2} {icon3}";
+          "format-icons" = [ "▁" "▂" "▃" "▄" "▅" "▆" "▇" "█" ];
+        };
+        
+        "memory" = {
+          "format" = "Mem:{percentage}%";
+        };
+        
+        "pulseaudio" = {
+          "format" = "Vol: {volume}%";
+        };
+        
+        "custom/screenshot" = {
+          "format" = "{icon}";
+          "on-click" = "flameshot gui -c";
+          "format-icons" = [ "⎙" ];
+        };
+        
+        "custom/screenshot2" = {
+          "format" = "{icon}";
+          "on-click" = "flameshot gui";
+          "format-icons" = [ "⎙/" ];
+        };
+      };
+    };
   };
+
 }
