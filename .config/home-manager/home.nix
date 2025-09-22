@@ -280,6 +280,7 @@
       # Fix font cache
       mkdir -p /home/clemmie/.cache/fontconfig
       ${pkgs.fontconfig}/bin/fc-cache -fv
+	exec waybar --log-level=warning
     '';
   };
 
