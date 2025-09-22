@@ -68,6 +68,7 @@ rm -r ~/.nixos_config
 mkdir ~/.nixos_config
 cp home.nix ~/.nixos_config
 cp configuration.nix ~/.nixos_config
+cp flake.nix ~/.nixos_config
 cp .zshrc ~/.zshrc
 cp -r ./modules ~/.nixos_config/modules
 sleep 3
