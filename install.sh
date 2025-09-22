@@ -64,19 +64,11 @@ echo "
 "
 sleep 3
 rm -r ~/.config
-cp -r .config ~/.config
-cp -r .extraConfig ~/.extraConfig
-cp -r modules /etc/nixos/modules
+rm -r ~/.nixos_config
+mkdir ~/.nixos_config
+cp home.nix ~/.nixos_config
+cp configuration.nix ~/.nixos_config
 cp .zshrc ~/.zshrc
-sudo cp ./configuration.nix /etc/nixos/
+cp -r ./modules ~/.nixos_config/modules
 sleep 3
-echo "
-#TODO Configurations after Base Install
-- Delete this folder
-- Login to all accounts
-- Configure KeepassXC
-- Configure Vscodium
-- Configure Search Engine
-- Set wallpaper
-- Profit :>
-"
+echo "All done :3"
