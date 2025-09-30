@@ -17,30 +17,6 @@
   };
 
   home.packages = with pkgs; [
-    mmex
-    librewolf
-    keepassxc
-    vesktop
-    weechat
-    lutris
-    vlc
-    libreoffice-fresh
-    git
-    github-cli
-    act
-    vscodium
-    cudatoolkit
-    wireshark
-    mullvad-vpn
-    kicad
-    logisim-evolution
-    ghidra-bin
-    krita
-    obs-studio
-    handbrake
-    curtail
-    metadata-cleaner
-    
     # Font packages
     fontconfig
     (pkgs.writeShellScriptBin "fc-cache-setup" ''
@@ -261,8 +237,9 @@
     # FIXED: Remove SwayFX-specific features for regular Sway
     extraConfig = ''
       # Wallpaper
-      exec ${pkgs.swaybg}/bin/swaybg -i /path/to/your/wallpaper.jpg
-      
+      exec waypaper --restore
+      exec waybar 
+           
       # Floating modifier
       floating_modifier Mod4
       
