@@ -56,14 +56,15 @@
 
   programs.git = {
     enable = true;
-    userName = "ClemTheAlien";
-    userEmail = "ClemTheAlien@proton.me";
+    settings = {
+    user.name = "ClemTheAlien";
+    user.email = "ClemTheAlien@proton.me";
+    };
   };
 
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
-    extensions = with pkgs.vscode-extensions; [ ];
   };
 
   programs.alacritty = {
@@ -135,10 +136,11 @@
 
   services.mako = {
     enable = true;
-    
+    settings = {
+    border-color= "#00000000";
+    background-color= "#00000000";
     font = "Departure Mono 10";
-    backgroundColor = "#00000000";
-    borderColor = "#00000000";
+    };
   };
 
   wayland.windowManager.sway = {
