@@ -7,6 +7,7 @@
     ./modules/Home/fastfetch.nix
     ./modules/Home/mangowc.nix
     ./modules/Home/waybar.nix
+    ./modules/Home/mako.nix
   ];
 
   home.enableNixpkgsReleaseCheck = false;
@@ -27,7 +28,7 @@
 
   home.packages = with pkgs; [
     mmex
-    librewolf
+    firefox
     keepassxc
     vesktop
     weechat
@@ -68,15 +69,6 @@
     settings = {
     user.name = "ClemTheAlien";
     user.email = "ClemTheAlien@proton.me";
-    };
-  };
-
-  services.mako = {
-    enable = true;
-    settings = {
-    border-color= "#00000000";
-    background-color= "#00000000";
-    font = "Departure Mono 10";
     };
   };
 }
