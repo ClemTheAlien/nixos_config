@@ -41,7 +41,7 @@ programs.waybar = {
           background-color: @color10;
           color: inherit;
           font-weight: 600;
-          border-radius: 25px;
+          border-radius: 0px;
       }
     '';
     settings = {
