@@ -23,7 +23,6 @@ nixpkgs.overlays = [
 		./modules/System/Daemons/printing.nix
 		./modules/Services/virtualization.nix
 		./modules/System/Shells/zsh.nix
-		./modules/Desktop/sway.nix
 		./modules/System/Greeters/ly.nix
 		./modules/System/Etc/fonts.nix
 		./modules/System/Daemons/xdg.nix
@@ -103,5 +102,7 @@ nixpkgs.overlays = [
 	services.udisks2.enable = true;
 	services.devmon.enable = true;
 
+	# MangoWc
+	programs.mango.enable = true;
 }
 
