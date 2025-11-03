@@ -32,6 +32,8 @@ nixpkgs.overlays = [
 		./modules/Services/searxng.nix
 		./modules/Services/steam.nix
 		./modules/System/Bootloaders/systemdboot.nix
+		./modules/Desktop/sway.nix
+		./modules/Desktop/mangowc.nix
 	];
 	# Hostname
 	networking.hostName = "blackmesa";
@@ -101,8 +103,5 @@ nixpkgs.overlays = [
 	services.gvfs.enable = true;
 	services.udisks2.enable = true;
 	services.devmon.enable = true;
-
-	# MangoWc
-	programs.mango.enable = true;
 }
 
