@@ -34,6 +34,7 @@ nixpkgs.overlays = [
 		./modules/System/Bootloaders/systemdboot.nix
 		./modules/Desktop/sway.nix
 		./modules/Desktop/mangowc.nix
+		./modules/System/Daemons/input-remapper.nix
 	];
 	# Hostname
 	networking.hostName = "blackmesa";
