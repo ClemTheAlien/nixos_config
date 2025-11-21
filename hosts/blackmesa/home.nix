@@ -27,6 +27,9 @@
   };
 
   home.packages = with pkgs; [
+    zotero
+    ytdownloader
+    clementine
     mmex
     firefox
     keepassxc
