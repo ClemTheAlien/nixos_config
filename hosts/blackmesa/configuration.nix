@@ -3,22 +3,10 @@
 { config, pkgs, lib, ... }:
 
 {
-nixpkgs.overlays = [
-(final: prev: {
-  flameshot = prev.flameshot.overrideAttrs (previousAttrs: {
-    cmakeFlags = [
-      "-DUSE_WAYLAND_CLIPBOARD=1"
-      "-DUSE_WAYLAND_GRIM=1"
-    ];
-    buildInputs = previousAttrs.buildInputs ++ [ final.libsForQt5.kguiaddons ];
-  });
-})
-
-];
 	imports =
 	[ # Include the results of the hardware scan.
 		./hardware-configuration.nix
-		./modules/System/Kernel/kernel.nix
+#		./modules/System/Kernel/kernel.nix
 		./modules/System/Graphics/nvidia.nix
 		./modules/System/Daemons/printing.nix
 		./modules/Services/virtualization.nix
@@ -34,7 +22,7 @@ nixpkgs.overlays = [
 		./modules/System/Bootloaders/systemdboot.nix
 		./modules/Desktop/sway.nix
 		./modules/Desktop/mangowc.nix
-		./modules/System/Daemons/input-remapper.nix
+		./modules/System/Daemons/keyd.nix
 	];
 	# Hostname
 	networking.hostName = "blackmesa";
@@ -83,7 +71,7 @@ nixpkgs.overlays = [
 		pcmanfm #file explorer
 		feh #image viewer
 		swayfx #sway effects
-		rofi-wayland # rofi 
+		rofi # rofi 
 		wl-clipboard #clipboard
 		waypaper #wallpapers
 		waybar #customizable bar

@@ -13,7 +13,7 @@
   home.enableNixpkgsReleaseCheck = false;
   home.username = "clemmie";
   home.homeDirectory = "/home/clemmie";
-  home.stateVersion = "25.05";
+  home.stateVersion = "25.11";
   nixpkgs.config.allowUnfree = true;
 
   # Fix fontconfig cache issues

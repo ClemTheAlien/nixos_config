@@ -52,13 +52,10 @@ bind=SUPER+SHIFT,8,tag,8
 bind=SUPER+SHIFT,9,tag,9
 bind=SUPER+SHIFT,0,tag,10
 
-monitorrule=eDP-1,0.55,1,tile,0,1,0,0,1920,1080,60
-
-exec-once=waybar
-exec-once=waypaper --restore
-
-
         '';
-
+   autostart_sh =''
+        waybar &
+        waypaper --restore
+        '';
   };
 }
