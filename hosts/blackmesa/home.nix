@@ -16,9 +16,6 @@
   home.stateVersion = "25.11";
   nixpkgs.config.allowUnfree = true;
 
-  # Fix fontconfig cache issues
-  xdg.cacheHome = "/home/clemmie/.cache";
-
   home.sessionVariables = {
     EDITOR = "nano";
     BROWSER = "firefox";
@@ -28,7 +25,7 @@
 
   home.packages = with pkgs; [
     zotero
-    ytdownloader
+    yt-dlp
     clementine
     mmex
     firefox
@@ -51,6 +48,8 @@
     krita
     obs-studio
     handbrake
+    makemkv
+    mkvtoolnix
     curtail
     metadata-cleaner
     
