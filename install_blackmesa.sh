@@ -1,4 +1,3 @@
-
 current_dir=$(basename "$PWD")
 if [ "$current_dir" != "nixos_config" ]; then
   echo "Error: You are not in the 'nixos_config' directory."
@@ -68,7 +67,7 @@ rm -r ~/.nixos_config
 mkdir ~/.nixos_config
 cp ./hosts/blackmesa/home.nix ~/.nixos_config
 cp ./hosts/blackmesa/configuration.nix ~/.nixos_config
-cp ./hosts/blackmesa/hardware-configuration.nix ~/.nixos_config
+cp /etc/nixos/hardware-configuration.nix ~/.nixos_config
 cp flake.nix ~/.nixos_config
 cp .zshrc ~/.zshrc
 cp -r ./modules ~/.nixos_config/modules
