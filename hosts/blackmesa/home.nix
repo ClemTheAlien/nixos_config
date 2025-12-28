@@ -26,12 +26,14 @@
   home.packages = with pkgs; [
     zotero
     yt-dlp
+    hexchat
+    anki
+    fluffychat
     clementine
     mmex
     firefox
     keepassxc
     vesktop
-    weechat
     lutris
     vlc
     libreoffice-fresh
