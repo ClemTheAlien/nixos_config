@@ -76,7 +76,9 @@
 		waypaper #wallpapers
 		waybar #customizable bar
 
-		flameshot #screenshot
+		grim
+		slurp
+		satty
 		webcamoid #webcam 
 		alacritty #terminal
 		fastfetch #fetch

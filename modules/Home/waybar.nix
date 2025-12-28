@@ -80,14 +80,8 @@ programs.waybar = {
         
         "custom/screenshot" = {
           "format" = "{icon}";
-          "on-click" = "flameshot gui -c";
+          "on-click" = "grim -g \"$(slurp)\" - | satty --filename -";
           "format-icons" = [ "⎙" ];
-        };
-        
-        "custom/screenshot2" = {
-          "format" = "{icon}";
-          "on-click" = "flameshot gui";
-          "format-icons" = [ "⎙/" ];
         };
       };
     };
