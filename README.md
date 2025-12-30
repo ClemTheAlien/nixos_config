@@ -13,4 +13,4 @@ in the .nixos_config directory to update the system :3.
 - Prism Launcher
 - Sober
 - Openshot
-- Dino
+- Wivrn
