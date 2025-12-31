@@ -5,7 +5,8 @@
     ./modules/Home/vscodium.nix
     ./modules/Home/alacritty.nix
     ./modules/Home/fastfetch.nix
-    ./modules/Home/mangowc.nix
+    ./modules/Home/Desktop/mangowc.nix
+    ./modules/Home/Desktop/awesomewm.nix
     ./modules/Home/waybar.nix
     ./modules/Home/mako.nix
   ];

@@ -20,7 +20,7 @@
 		./modules/Services/searxng.nix
 		./modules/Services/steam.nix
 		./modules/System/Bootloaders/systemdboot.nix
-		./modules/Desktop/sway.nix
+		./modules/Desktop/awesomewm.nix
 		./modules/Desktop/mangowc.nix
 		./modules/System/Daemons/keyd.nix
 	];
