@@ -1,6 +1,11 @@
 {
-home.file.".config/awesome" = {
-    source = ./Configs/rc.lua; # Point to your local folder
-    recursive = true; # Symlinks the whole directory
-  };
+services={
+        xserver = {
+            enable = true;
+
+            windowManager.awesome = {
+                enable = true;
+            };
+        };
+};
 }

@@ -9,15 +9,17 @@
       url = "github:DreamMaoMao/mangowc";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    pokewm = {url ="git+https://codeberg.org/UraniumSoftware/pokewm";};
   };
 
-  outputs = { self, nixpkgs, home-manager, mangowc, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, mangowc, pokewm, ... }@inputs: {
     # Desktop configuration
     nixosConfigurations.blackmesa = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
               ./configuration.nix
                 mangowc.nixosModules.mango
+                pokewm.nixosModules.default
       ];
     };
     homeConfigurations.clemmie = home-manager.lib.homeManagerConfiguration {
