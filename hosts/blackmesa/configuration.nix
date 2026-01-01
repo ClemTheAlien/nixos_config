@@ -22,6 +22,7 @@
 		./modules/System/Bootloaders/systemdboot.nix
 		./modules/Desktop/awesomewm.nix
 		./modules/Desktop/mangowc.nix
+		./modules/Desktop/pokewm.nix
 		./modules/System/Daemons/keyd.nix
 	];
 	# Hostname

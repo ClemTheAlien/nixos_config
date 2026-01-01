@@ -7,7 +7,9 @@
     ./modules/Home/fastfetch.nix
     ./modules/Home/Desktops/mangowc.nix
     ./modules/Home/Desktops/awesomewm.nix
+    ./modules/Home/Desktops/pokewm.nix
     ./modules/Home/waybar.nix
+    ./modules/Home/polybar.nix
     ./modules/Home/mako.nix
   ];
 

@@ -70,6 +70,6 @@ cp ./hosts/blackmesa/configuration.nix ~/.nixos_config
 cp /etc/nixos/hardware-configuration.nix ~/.nixos_config
 cp flake.nix ~/.nixos_config
 cp .zshrc ~/.zshrc
-cp -r ./modules ~/.nixos_config/modules
+cp -r ./hosts/blackmesa/modules ~/.nixos_config/modules
 sleep 3
 echo "All done :3"
