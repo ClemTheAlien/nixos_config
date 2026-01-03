@@ -21,7 +21,7 @@
                 mangowc.nixosModules.mango
       ];
     };
-    nixosConfigurations.lucky38 = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.themojave = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
               ./configuration.nix
