@@ -1,0 +1,1 @@
+The server partition of my LENOVO Legion S7 16IAH7 Type 82TF
