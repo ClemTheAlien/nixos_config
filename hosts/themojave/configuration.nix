@@ -24,7 +24,7 @@
 		./modules/System/Daemons/keyd.nix
 	];
 	# Hostname
-	networking.hostName = "lucky38";
+	networking.hostName = "themojave";
 	# Enable networking
 	networking.networkmanager.enable = true;
   	#Timezone

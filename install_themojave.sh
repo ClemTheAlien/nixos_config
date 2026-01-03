@@ -65,8 +65,8 @@ sleep 3
 rm -r ~/.config
 rm -r ~/.nixos_config
 mkdir ~/.nixos_config
-cp ./hosts/lucky38/home.nix ~/.nixos_config
-cp ./hosts/lucky38/configuration.nix ~/.nixos_config
+cp ./hosts/themojave/home.nix ~/.nixos_config
+cp ./hosts/themojave/configuration.nix ~/.nixos_config
 cp /etc/nixos/hardware-configuration.nix ~/.nixos_config
 cp flake.nix ~/.nixos_config
 cp .zshrc ~/.zshrc
