@@ -6,6 +6,7 @@
     ./modules/Home/alacritty.nix
     ./modules/Home/fastfetch.nix
     ./modules/Home/Desktops/mangowc.nix
+    ./modules/Home/Desktops/awesomewm.nix
     ./modules/Home/Desktops/pokewm.nix
     ./modules/Home/waybar.nix
     ./modules/Home/polybar.nix
@@ -36,7 +37,6 @@
     firefox
     keepassxc
     vesktop
-    lutris
     vlc
     libreoffice-fresh
     git
@@ -51,9 +51,6 @@
     ghidra-bin
     krita
     obs-studio
-    handbrake
-    makemkv
-    mkvtoolnix
     curtail
     metadata-cleaner
     
