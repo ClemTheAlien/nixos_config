@@ -7,7 +7,7 @@
 	[ # Include the results of the hardware scan.
 		./hardware-configuration.nix
 #		./modules/System/Kernel/kernel.nix
-		./modules/System/Graphics/nvidia.nix
+		./modules/System/Daemons/printing.nix
 		./modules/Services/virtualization.nix
 		./modules/System/Shells/zsh.nix
 		./modules/System/Greeters/ly.nix
@@ -17,13 +17,14 @@
 		./modules/System/Daemons/pipewire.nix
 		./modules/Pkgs/flatpak.nix
 		./modules/Services/searxng.nix
-		./modules/Services/steam.nix
 		./modules/System/Bootloaders/systemdboot.nix
+		./modules/Desktop/awesomewm.nix
 		./modules/Desktop/mangowc.nix
+		./modules/Desktop/pokewm.nix
 		./modules/System/Daemons/keyd.nix
 	];
 	# Hostname
-	networking.hostName = "blackmesa";
+	networking.hostName = "lucky38";
 	# Enable networking
 	networking.networkmanager.enable = true;
   	#Timezone

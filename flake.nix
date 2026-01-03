@@ -19,7 +19,20 @@
       modules = [
               ./configuration.nix
                 mangowc.nixosModules.mango
+      ];
+    };
+    nixosConfigurations.lucky38 = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+              ./configuration.nix
+                mangowc.nixosModules.mango
                 pokewm.nixosModules.default
+      ];
+    };
+    nixosConfigurations.vaulttech = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+              ./configuration.nix
       ];
     };
     homeConfigurations.clemmie = home-manager.lib.homeManagerConfiguration {

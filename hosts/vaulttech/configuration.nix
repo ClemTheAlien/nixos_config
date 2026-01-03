@@ -6,25 +6,13 @@
 	imports =
 	[ # Include the results of the hardware scan.
 		./hardware-configuration.nix
-#		./modules/System/Kernel/kernel.nix
 		./modules/System/Daemons/printing.nix
-		./modules/Services/virtualization.nix
 		./modules/System/Shells/zsh.nix
-		./modules/System/Greeters/ly.nix
-		./modules/System/Etc/fonts.nix
-		./modules/System/Daemons/xdg.nix
-		./modules/System/Daemons/bluetooth.nix
-		./modules/System/Daemons/pipewire.nix
-		./modules/Pkgs/flatpak.nix
-		./modules/Services/searxng.nix
 		./modules/System/Bootloaders/systemdboot.nix
-		./modules/Desktop/awesomewm.nix
-		./modules/Desktop/mangowc.nix
-		./modules/Desktop/pokewm.nix
-		./modules/System/Daemons/keyd.nix
+		./modules/Server/jellyfin.nix
 	];
 	# Hostname
-	networking.hostName = "blackmesa";
+	networking.hostName = "vaulttech";
 	# Enable networking
 	networking.networkmanager.enable = true;
   	#Timezone

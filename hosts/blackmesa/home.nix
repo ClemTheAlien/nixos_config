@@ -2,13 +2,10 @@
 
 {
   imports = [
-    ./modules/Home/vscodium.nix
     ./modules/Home/alacritty.nix
     ./modules/Home/fastfetch.nix
     ./modules/Home/Desktops/mangowc.nix
-    ./modules/Home/Desktops/pokewm.nix
     ./modules/Home/waybar.nix
-    ./modules/Home/polybar.nix
     ./modules/Home/mako.nix
   ];
 
@@ -26,37 +23,19 @@
   };
 
   home.packages = with pkgs; [
-    zotero
-    yt-dlp
     hexchat
-    anki
     fluffychat
     clementine
-    mmex
     firefox
     keepassxc
     vesktop
     lutris
-    vlc
-    libreoffice-fresh
-    git
-    github-cli
-    act
-    vscodium
     cudatoolkit
-    wireshark
-    mullvad-vpn
-    kicad
-    logisim-evolution
-    ghidra-bin
-    krita
-    obs-studio
     handbrake
     makemkv
     mkvtoolnix
     curtail
-    metadata-cleaner
-    
+
     # Font packages
     fontconfig
     (pkgs.writeShellScriptBin "fc-cache-setup" ''

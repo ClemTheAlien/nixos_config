@@ -1,0 +1,1 @@
+This config is meant for my LENOVO Legion S7 16IAH7 Type 82TF's gaming partition and this computer is to also be used to rip dvds
