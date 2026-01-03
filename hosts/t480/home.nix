@@ -43,7 +43,6 @@
     github-cli
     act
     vscodium
-    cudatoolkit
     wireshark
     mullvad-vpn
     kicad
