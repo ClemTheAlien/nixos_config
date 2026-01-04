@@ -11,6 +11,7 @@
     ./modules/Home/waybar.nix
     ./modules/Home/polybar.nix
     ./modules/Home/mako.nix
+    ./modules/Home/picom.nix
   ];
 
   home.enableNixpkgsReleaseCheck = false;
