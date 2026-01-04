@@ -10,9 +10,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     pokewm = {url ="git+https://codeberg.org/UraniumSoftware/pokewm";};
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
-  outputs = { self, nixpkgs, home-manager, mangowc, pokewm, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, mangowc, pokewm, nixos-hardware, ... }@inputs: {
     # Desktop configuration
     nixosConfigurations.blackmesa = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -27,12 +28,7 @@
               ./configuration.nix
                 mangowc.nixosModules.mango
                 pokewm.nixosModules.default
-      ];
-    };
-    nixosConfigurations.vaulttech = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-              ./configuration.nix
+                nixos-hardware.nixosModules.lenovo-thinkpad-t480
       ];
     };
     homeConfigurations.clemmie = home-manager.lib.homeManagerConfiguration {

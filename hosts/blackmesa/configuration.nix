@@ -21,6 +21,7 @@
 		./modules/System/Bootloaders/systemdboot.nix
 		./modules/Desktop/mangowc.nix
 		./modules/System/Daemons/keyd.nix
+		./modules/Server/jellyfin.nix
 	];
 	# Hostname
 	networking.hostName = "blackmesa";
