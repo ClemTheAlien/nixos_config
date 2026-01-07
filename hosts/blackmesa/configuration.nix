@@ -8,7 +8,6 @@
 		./hardware-configuration.nix
 #		./modules/System/Kernel/kernel.nix
 		./modules/System/Graphics/nvidia.nix
-		./modules/Services/virtualization.nix
 		./modules/System/Shells/zsh.nix
 		./modules/System/Greeters/ly.nix
 		./modules/System/Etc/fonts.nix
