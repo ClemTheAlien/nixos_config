@@ -25,6 +25,7 @@
               ./configuration.nix
                 mangowc.nixosModules.mango
                 inputs.dms.nixosModules.dankMaterialShell
+                inputs.dms.nixosModules.greeter
       ];
     };
     nixosConfigurations.themojave = nixpkgs.lib.nixosSystem {
@@ -35,6 +36,7 @@
                 pokewm.nixosModules.default
                 nixos-hardware.nixosModules.lenovo-thinkpad-t480
                 inputs.dms.nixosModules.dankMaterialShell
+                inputs.dms.nixosModules.greeter
       ];
     };
     homeConfigurations.clemmie = home-manager.lib.homeManagerConfiguration {

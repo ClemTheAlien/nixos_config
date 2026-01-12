@@ -11,7 +11,4 @@ programs.dankMaterialShell = {
     # Session state defaults
   };
 };
-programs.dsearch = {
-    enable = true;
-};
 }

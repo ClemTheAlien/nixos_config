@@ -9,7 +9,6 @@
 #		./modules/System/Kernel/kernel.nix
 		./modules/System/Graphics/nvidia.nix
 		./modules/System/Shells/zsh.nix
-		./modules/System/Greeters/ly.nix
 		./modules/System/Etc/fonts.nix
 		./modules/System/Daemons/xdg.nix
 		./modules/System/Daemons/bluetooth.nix

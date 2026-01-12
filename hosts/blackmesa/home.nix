@@ -5,7 +5,6 @@
     ./modules/Home/alacritty.nix
     ./modules/Home/fastfetch.nix
     ./modules/Home/Desktops/mangowc.nix
-    ./modules/Home/waybar.nix
     ./modules/Home/mako.nix
     ./modules/Home/Desktop/dank-material-shell.nix
   ];

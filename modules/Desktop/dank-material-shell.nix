@@ -14,4 +14,9 @@ programs.dankMaterialShell = {
   enableAudioWavelength = true;      # Audio visualizer (cava)
   enableCalendarEvents = true;       # Calendar integration (khal)
 };
+programs.dankMaterialShell.greeter = {
+  enable = true;
+  compositor.name = "sway";
+  configHome = "/home/clemmie";
+};
 }

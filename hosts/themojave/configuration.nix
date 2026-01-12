@@ -10,7 +10,6 @@
 		./modules/System/Daemons/printing.nix
 		./modules/Services/virtualization.nix
 		./modules/System/Shells/zsh.nix
-		./modules/System/Greeters/ly.nix
 		./modules/System/Etc/fonts.nix
 		./modules/System/Daemons/xdg.nix
 		./modules/System/Daemons/bluetooth.nix
