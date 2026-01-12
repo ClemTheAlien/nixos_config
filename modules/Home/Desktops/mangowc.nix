@@ -16,7 +16,7 @@ tagrule=id:9,layout_name:scroller
 #Keys
 bind=SUPER,Return,spawn,alacritty
 bind=SUPER+SHIFT,c,killclient,
-bind=SUPER,r,spawn,rofi -show drun
+bind=SUPER,r,spawn,dms ipc call spotlight toggle
 bind=SUPER+SHIFT,r,reload_config
 bind=SUPER+SHIFT,e,quit,
 
@@ -54,8 +54,7 @@ bind=SUPER+SHIFT,0,tag,10
 
 monitorrule=eDP-1,0.55,1,tile,0,1,0,0,1920,1080,60
 
-exec-once=waybar
-exec-once=waypaper --restore
+rexec-once=dms run
 
 
         '';

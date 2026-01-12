@@ -12,6 +12,7 @@
     ./modules/Home/polybar.nix
     ./modules/Home/mako.nix
     ./modules/Home/picom.nix
+    ./modules/Home/Desktop/dank-material-shell.nix
   ];
 
   home.enableNixpkgsReleaseCheck = false;

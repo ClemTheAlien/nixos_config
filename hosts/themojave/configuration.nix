@@ -21,6 +21,7 @@
 		./modules/Desktop/awesomewm.nix
 		./modules/Desktop/mangowc.nix
 		./modules/Desktop/pokewm.nix
+		./modules/Desktop/dank-material-shell.nix
 	];
 	# Hostname
 	networking.hostName = "themojave";

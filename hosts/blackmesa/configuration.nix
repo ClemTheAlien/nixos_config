@@ -21,6 +21,7 @@
 		./modules/Desktop/mangowc.nix
 		./modules/System/Daemons/keyd.nix
 		./modules/Server/jellyfin.nix
+		./modules/Desktop/dank-material-shell.nix
 	];
 	# Hostname
 	networking.hostName = "blackmesa";
