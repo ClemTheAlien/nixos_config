@@ -11,10 +11,7 @@
     };
     pokewm = {url ="git+https://codeberg.org/UraniumSoftware/pokewm";};
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    dms = {
-      url = "github:AvengeMedia/DankMaterialShell/stable";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+
   };
 
   outputs = { self, nixpkgs, home-manager, mangowc, pokewm, nixos-hardware, ... }@inputs: {
@@ -25,7 +22,6 @@
               ./configuration.nix
                 mangowc.nixosModules.mango
                 inputs.dms.nixosModules.dankMaterialShell
-                inputs.dms.nixosModules.greeter
       ];
     };
     nixosConfigurations.themojave = nixpkgs.lib.nixosSystem {
@@ -35,8 +31,6 @@
                 mangowc.nixosModules.mango
                 pokewm.nixosModules.default
                 nixos-hardware.nixosModules.lenovo-thinkpad-t480
-                inputs.dms.nixosModules.dankMaterialShell
-                inputs.dms.nixosModules.greeter
       ];
     };
     homeConfigurations.clemmie = home-manager.lib.homeManagerConfiguration {
@@ -44,7 +38,7 @@
       modules = [
         ./home.nix
         inputs.mangowc.hmModules.mango
-        inputs.dms.homeModules.dankMaterialShell.default
+        inputs.noctalia.homeModules.default
       ];
     };
   };

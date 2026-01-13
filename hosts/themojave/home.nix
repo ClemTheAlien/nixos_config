@@ -10,7 +10,7 @@
     ./modules/Home/Desktops/pokewm.nix
     ./modules/Home/polybar.nix
     ./modules/Home/picom.nix
-    ./modules/Home/Desktop/dank-material-shell.nix
+    ./modules/Home/Desktops/noctalia.nix
   ];
 
   home.enableNixpkgsReleaseCheck = false;

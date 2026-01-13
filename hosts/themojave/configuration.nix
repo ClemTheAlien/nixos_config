@@ -20,7 +20,7 @@
 		./modules/Desktop/awesomewm.nix
 		./modules/Desktop/mangowc.nix
 		./modules/Desktop/pokewm.nix
-		./modules/Desktop/dank-material-shell.nix
+		./modules/System/Greeters/ly.nix
 	];
 	# Hostname
 	networking.hostName = "themojave";
@@ -90,5 +90,8 @@
 	services.gvfs.enable = true;
 	services.udisks2.enable = true;
 	services.devmon.enable = true;
+
+	services.power-profiles-daemon.enable = true;
+  services.upower.enable = true;
 }
 

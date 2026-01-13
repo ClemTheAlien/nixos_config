@@ -20,7 +20,7 @@
 		./modules/Desktop/mangowc.nix
 		./modules/System/Daemons/keyd.nix
 		./modules/Server/jellyfin.nix
-		./modules/Desktop/dank-material-shell.nix
+		./modules/System/Greeters/ly.nix
 	];
 	# Hostname
 	networking.hostName = "blackmesa";
@@ -92,5 +92,8 @@
 	services.gvfs.enable = true;
 	services.udisks2.enable = true;
 	services.devmon.enable = true;
+
+	services.power-profiles-daemon.enable = true;
+  services.upower.enable = true;
 }
 

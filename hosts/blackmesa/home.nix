@@ -5,7 +5,7 @@
     ./modules/Home/alacritty.nix
     ./modules/Home/fastfetch.nix
     ./modules/Home/Desktops/mangowc.nix
-    ./modules/Home/Desktop/dank-material-shell.nix
+    ./modules/Home/Desktops/noctalia.nix
   ];
 
   home.enableNixpkgsReleaseCheck = false;

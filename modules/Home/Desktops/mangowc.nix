@@ -16,7 +16,7 @@ tagrule=id:9,layout_name:scroller
 #Keys
 bind=SUPER,Return,spawn,alacritty
 bind=SUPER+SHIFT,c,killclient,
-bind=SUPER,r,spawn,dms ipc call spotlight toggle
+bind=SUPER,r,spawn,noctalia-shell ipc call launcher toggle
 bind=SUPER+SHIFT,r,reload_config
 bind=SUPER+SHIFT,e,quit,
 
