@@ -74,9 +74,7 @@
 		waypaper #wallpapers
 		waybar #customizable bar
 
-		grim
-		slurp
-		satty
+		grimblast
 		webcamoid #webcam 
 		alacritty #terminal
 		fastfetch #fetch

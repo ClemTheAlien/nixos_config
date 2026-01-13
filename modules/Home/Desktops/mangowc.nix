@@ -54,7 +54,7 @@ bind=SUPER+SHIFT,0,tag,10
 
 monitorrule=eDP-1,0.55,1,tile,0,1,0,0,1920,1080,60
 
-rexec-once=dms run
+exec-once=dms run
 
 
         '';
