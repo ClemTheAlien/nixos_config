@@ -1,13 +1,14 @@
-# Welcome to ClemTheAlien's NixOS Dotfiles for Desktop Usage 
-I use home manager so make sure to ```home manager switch --flake .nixos_config``` ```sudo nixos-rebuild switch --flake .nixos_config```
-in the .nixos_config directory to update the system :3. 
+# Welcome to ClemTheAlien's NixOS Dotfiles 
+Make sure to ```home manager switch --flake .nixos_config#[INSERT_HOST]``` ```sudo nixos-rebuild switch --flake .nixos_config[INSERT_HOST]``` or use the built in ```update```, ```home_update```, and or ```world_update``` to update your config :3. 
 
 ![Screenshot](./assets/screenshot1.png)
+![Screenshot](./assets/screenshot2.png)
+![Screenshot](./assets/screenshot3.png)
 
-
-> **Use the install script for whatever host you desire. Remeber to start the script on a fresh NixOS install then rebuild boot and switch**
+> **Remeber to start the script on a fresh NixOS install and rebuild both world and home at the same time for this to work**
 
 ## Flatpaks I Use 
 - Flatseal
 - Prism Launcher
 - Openshot
+- Zen Browser
