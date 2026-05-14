@@ -123,3 +123,23 @@
 ;; ==========================================
           (setq vterm-shell "${pkgs.zsh}/bin/zsh") 
           (setq vterm-max-scrollback 10000)
+
+;; ==========================================
+;; 6. Org Roam & Modern Aesthetics
+;; ==========================================
+(use-package org-roam
+  :ensure t
+  :custom
+  (org-roam-directory (file-truename "~/notes"))
+  :bind
+  (("C-c o f" . org-roam-node-find)
+   ("C-c o i" . org-roam-node-insert)
+   ("C-c o l" . org-roam-buffer-toggle)
+   ("C-c o g" . org-roam-graph)))
+
+(use-package org-roam-ui
+  :after org-roam
+  :config
+  (setq org-roam-ui-sync-theme t
+        org-roam-ui-follow t
+        org-roam-ui-update-on-save t))
