@@ -7,7 +7,7 @@
 		bluez #bluetooth
 		bluez-tools #bluetooth
 		blueman #bluetooth gui
-		pavucontrol #audio gui
+		pwvucontrol #audio gui
 		pcmanfm #file explorer
 		feh #image viewer
 		wl-clipboard #clipboard
