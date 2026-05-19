@@ -8,6 +8,7 @@
 		bluez-tools #bluetooth
 		blueman #bluetooth gui
 		pwvucontrol #audio gui
+		networkmanagerapplet #network gui
 		pcmanfm #file explorer
 		feh #image viewer
 		wl-clipboard #clipboard
