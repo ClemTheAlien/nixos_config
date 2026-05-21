@@ -15,6 +15,8 @@
       ];
 
       command = "${pkgs.bash}/bin/bash -c '${pkgs.pywal}/bin/wal -R && clear && ${pkgs.fastfetch}/bin/fastfetch; exec ${pkgs.zsh}/bin/zsh'";
+
+      confirm-close-surface = false;
     };
   };
 
