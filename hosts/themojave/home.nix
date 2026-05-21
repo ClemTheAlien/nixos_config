@@ -10,6 +10,7 @@
    ../../modules/apps/git
    ../../modules/apps/zsh
    ../../modules/apps/emacs
+   ../../modules/desktop/hyprlock
   ];
 
   home.enableNixpkgsReleaseCheck = false;

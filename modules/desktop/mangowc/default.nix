@@ -24,6 +24,7 @@ bind=SUPER+SHIFT,c,killclient,
 bind=SUPER,r,spawn,noctalia-shell ipc call launcher toggle
 bind=SUPER+SHIFT,r,reload_config
 bind=SUPER+SHIFT,e,quit,
+bind=SUPER, L, spawn, hyprlock
 
 bind=SUPER,Left,focusdir,left
 bind=SUPER,Down,focusdir,down
