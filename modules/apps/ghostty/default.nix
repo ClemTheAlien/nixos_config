@@ -1,4 +1,4 @@
-{
+{ config, pkgs, ... }:{
   programs.ghostty = {
     enable = true;
     enableZshIntegration = true;
@@ -13,6 +13,8 @@
         "alt+t=new_tab"
         "alt+c=close_tab"
       ];
+
+      command = "${pkgs.bash}/bin/bash -c '${pkgs.pywal}/bin/wal -R && clear && ${pkgs.fastfetch}/bin/fastfetch; exec ${pkgs.zsh}/bin/zsh'";
     };
   };
 

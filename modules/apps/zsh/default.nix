@@ -14,11 +14,8 @@ programs.zsh ={
   autosuggestion.enable = true;
   syntaxHighlighting.enable = true;
   history.size = 10000;
-  initContent = ''
-    wal -R
-clear
-fastfetch
-PS1="%B%{$fg%}[%{$fg%}%n%{$fg%}@%{$fg%}%M %{$fg%}%~%{$fg%}]%{$reset_color%}$%b "
+  initContent= ''
+    PS1="%B%{$fg%}[%{$fg%}%n%{$fg%}@%{$fg%}%M %{$fg%}%~%{$fg%}]%{$reset_color%}$%b "
   '';
 };
 }
