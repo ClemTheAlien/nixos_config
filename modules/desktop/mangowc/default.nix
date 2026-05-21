@@ -13,6 +13,11 @@ tagrule=id:6,layout_name:tile
 tagrule=id:7,layout_name:tile
 tagrule=id:8,layout_name:vertical_scroller
 tagrule=id:9,layout_name:scroller
+
+bind=SUPER,space,togglefloating
+mousebind=SUPER,btn_left,moveresize,curmove
+mousebind=SUPER,btn_right,moveresize,curresize
+
 #Keys
 bind=SUPER,Return,spawn,ghostty
 bind=SUPER+SHIFT,c,killclient,
