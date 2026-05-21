@@ -23,6 +23,4 @@
 		satty#screenshot
 		slurp #screenshot
 	];
-
-	services.gnome.gnome-keyring.enable = true; #keyring
 }

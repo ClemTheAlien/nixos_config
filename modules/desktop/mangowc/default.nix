@@ -14,7 +14,7 @@ tagrule=id:7,layout_name:tile
 tagrule=id:8,layout_name:vertical_scroller
 tagrule=id:9,layout_name:scroller
 #Keys
-bind=SUPER,Return,spawn,alacritty
+bind=SUPER,Return,spawn,ghostty
 bind=SUPER+SHIFT,c,killclient,
 bind=SUPER,r,spawn,noctalia-shell ipc call launcher toggle
 bind=SUPER+SHIFT,r,reload_config

@@ -3,7 +3,7 @@
 {
   imports = [
    ../../modules/apps/vscodium
-   ../../modules/apps/alacritty
+   ../../modules/apps/ghostty
    ../../modules/apps/fastfetch
    ../../modules/desktop/mangowc
    ../../modules/desktop/noctalia-shell
@@ -20,7 +20,7 @@
 
   home.sessionVariables = {
     EDITOR = "nano";
-    TERMINAL = "alacritty";
+    TERMINAL = "ghostty";
     XDG_CACHE_HOME = "/home/clemmie/.cache";  # Ensure cache directory is set
   };
 
