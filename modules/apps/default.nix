@@ -14,7 +14,7 @@
 		wl-clipboard #clipboard
 
 		webcamoid #webcam 
-		alacritty #terminal
+		ghostty #terminal
 		fastfetch #fetch
 		pywal # colorscheme
 		imagemagick #colorscheme backend
