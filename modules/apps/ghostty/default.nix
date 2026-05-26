@@ -6,7 +6,7 @@
       font-family = "Departure Mono";
       font-size = 8.5; 
 
-      background-opacity = 0.7;
+      background-opacity = 0.8;
       background-blur = true;
 
       keybind = [

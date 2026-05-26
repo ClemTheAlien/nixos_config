@@ -60,6 +60,7 @@ bind=SUPER+SHIFT,0,tag,10
 
 borderpx=0
 blur=1
+border_radius = 12
 
 exec-once=noctalia-shell
         '';
