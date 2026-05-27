@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 {
   imports = [
     ./kernel
@@ -41,4 +41,8 @@ users.users.clemmie = { #CHANGE ME and all instances of Clemmie
 	packages = with pkgs; [];
 	shell = pkgs.zsh;
   };
+
+nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+nix.registry.nixpkgs.flake = inputs.nixpkgs;
+
 }
