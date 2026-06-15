@@ -27,8 +27,7 @@
 
   home.packages = with pkgs; [
     clementine
-    keepassxc
-    vesktop
+    keepassx
     vlc
     cudatoolkit
     handbrake

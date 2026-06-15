@@ -30,7 +30,6 @@
     anki
     clementine
     keepassxc
-    vesktop
     vlc
     libreoffice-fresh
     git
