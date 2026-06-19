@@ -13,6 +13,7 @@
     ./ly
     ./flatpak
     ./zsh
+    ./mullvad-vpn
   ];
 
 
