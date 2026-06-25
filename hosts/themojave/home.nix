@@ -9,7 +9,6 @@
    ../../modules/desktop/noctalia-shell
    ../../modules/apps/git
    ../../modules/apps/zsh
-   ../../modules/apps/emacs
    ../../modules/desktop/hyprlock
   ];
 
