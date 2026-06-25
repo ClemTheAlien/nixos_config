@@ -1,4 +1,5 @@
 		{ config, pkgs, ... }: {
+
   # Virt Manager (QEMU/KVM Virt Machines) 
 	programs.virt-manager.enable = true;
 	users.groups.libvirtd.members = ["clemmie"];
@@ -13,10 +14,14 @@
 	#Distrobox
 	environment.systemPackages = [
   pkgs.distrobox
+	pkgs.wl-clipboard
 ];
-
-# Ensure Distrobox can resolve symlinks pointing back to the Nix store
-environment.etc."distrobox/distrobox.conf".text = ''
+	environment.etc."distrobox/distrobox.conf".text = ''
   container_additional_volumes="/nix/store:/nix/store:ro"
 '';
+
+	#Waydroid
+  virtualisation.waydroid.enable = true;
+  virtualisation.waydroid.package = pkgs.waydroid-nftables;
+
     }
