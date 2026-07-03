@@ -2,7 +2,6 @@
 
 {
   imports = [
-   ../../modules/apps/vscodium
    ../../modules/apps/ghostty
    ../../modules/apps/fastfetch
    ../../modules/desktop/mangowc

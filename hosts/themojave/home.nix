@@ -34,7 +34,6 @@
     git
     github-cli
     act
-    vscodium
     krita
     obs-studio
     curtail
