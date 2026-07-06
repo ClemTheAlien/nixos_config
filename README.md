@@ -9,4 +9,3 @@ Make sure to ```home manager switch --flake .nixos_config#[INSERT_HOST]``` ```su
 - Flatseal
 - Prism Launcher
 - LibreWolf
-- Obsidian

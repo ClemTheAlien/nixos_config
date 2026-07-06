@@ -2,17 +2,16 @@
 
 {
   imports = [
-   ../../modules/apps/vscodium
-   ../../modules/apps/ghostty
-   ../../modules/apps/fastfetch
-   ../../modules/desktop/mangowc
-   ../../modules/desktop/noctalia-shell
-   ../../modules/apps/git
-   ../../modules/apps/zsh
-   ../../modules/desktop/hyprlock
+    ../../modules/apps/zed
+    ../../modules/apps/ghostty
+    ../../modules/apps/fastfetch
+    ../../modules/desktop/mangowc
+    ../../modules/desktop/noctalia-shell
+    ../../modules/apps/git
+    ../../modules/apps/zsh
+    ../../modules/desktop/hyprlock
   ];
 
-  home.enableNixpkgsReleaseCheck = false;
   home.username = "clemmie";
   home.homeDirectory = "/home/clemmie";
   home.stateVersion = "25.11";
@@ -21,7 +20,7 @@
   home.sessionVariables = {
     EDITOR = "nano";
     TERMINAL = "ghostty";
-    XDG_CACHE_HOME = "/home/clemmie/.cache";  # Ensure cache directory is set
+    XDG_CACHE_HOME = "/home/clemmie/.cache"; # Ensure cache directory is set
   };
 
   home.packages = with pkgs; [
@@ -34,12 +33,13 @@
     git
     github-cli
     act
+    nix-direnv
+    direnv
     krita
     obs-studio
     curtail
     metadata-cleaner
-    
-    
+
     # Font packages
     fontconfig
     (pkgs.writeShellScriptBin "fc-cache-setup" ''

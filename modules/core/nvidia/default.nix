@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
   # 1. Allow unfree software (Required for proprietary drivers)
   nixpkgs.config.allowUnfree = true;
@@ -18,7 +19,7 @@
 
     # Use the proprietary drivers (set to false)
     # Note: "open = true" is for newer Turing/Ampere cards but proprietary is still more stable for laptops
-    open = false; 
+    open = false;
 
     # Enable the Nvidia settings menu
     nvidiaSettings = true;

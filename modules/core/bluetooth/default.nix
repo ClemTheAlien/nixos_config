@@ -1,6 +1,6 @@
-	{ config, pkgs, ... }:
-  {
- # 1. Enable Bluetooth Hardware
+{ config, pkgs, ... }:
+{
+  # 1. Enable Bluetooth Hardware
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
@@ -14,4 +14,4 @@
       };
     };
   };
-  }
+}

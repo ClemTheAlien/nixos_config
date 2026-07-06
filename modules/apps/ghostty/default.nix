@@ -1,10 +1,11 @@
-{ config, pkgs, ... }:{
+{ config, pkgs, ... }:
+{
   programs.ghostty = {
     enable = true;
     enableZshIntegration = true;
     settings = {
       font-family = "Departure Mono";
-      font-size = 8.5; 
+      font-size = 8.5;
 
       background-opacity = 0.8;
       background-blur = true;

@@ -1,5 +1,11 @@
-{ config, lib, pkgs, inputs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
-    	programs.mango.enable = true;   
+  programs.mango.enable = true;
 }

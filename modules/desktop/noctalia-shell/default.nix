@@ -3,7 +3,7 @@
 {
   programs.noctalia-shell = {
     enable = true;
-    
+
     # Plugin management (sources and states)
     plugins = {
       sources = [
@@ -67,21 +67,37 @@
         frameRadius = 12;
         widgets = {
           left = [
-            { id = "Battery"; displayMode = "onhover"; }
-            { id = "Clock"; formatHorizontal = "HH:mm ddd, MMM dd"; }
+            {
+              id = "Battery";
+              displayMode = "onhover";
+            }
+            {
+              id = "Clock";
+              formatHorizontal = "HH:mm ddd, MMM dd";
+            }
           ];
           center = [
-            { id = "Workspace"; characterCount = 2; showBadge = true; }
+            {
+              id = "Workspace";
+              characterCount = 2;
+              showBadge = true;
+            }
           ];
           right = [
-            { id = "Volume"; displayMode = "onhover"; }
+            {
+              id = "Volume";
+              displayMode = "onhover";
+            }
             {
               id = "CustomButton";
               icon = "cash-heart";
               leftClickExec = "grim -g \"$(slurp)\" - | satty --filename -";
             }
             { id = "plugin:pomodoro"; }
-            { id = "ControlCenter"; icon = "analyze"; }
+            {
+              id = "ControlCenter";
+              icon = "analyze";
+            }
           ];
         };
       };
@@ -89,12 +105,30 @@
       controlCenter = {
         position = "close_to_bar_button";
         cards = [
-          { enabled = true; id = "profile-card"; }
-          { enabled = true; id = "shortcuts-card"; }
-          { enabled = true; id = "audio-card"; }
-          { enabled = true; id = "brightness-card"; }
-          { enabled = true; id = "weather-card"; }
-          { enabled = true; id = "media-sysmon-card"; }
+          {
+            enabled = true;
+            id = "profile-card";
+          }
+          {
+            enabled = true;
+            id = "shortcuts-card";
+          }
+          {
+            enabled = true;
+            id = "audio-card";
+          }
+          {
+            enabled = true;
+            id = "brightness-card";
+          }
+          {
+            enabled = true;
+            id = "weather-card";
+          }
+          {
+            enabled = true;
+            id = "media-sysmon-card";
+          }
         ];
       };
 

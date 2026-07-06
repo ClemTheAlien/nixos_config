@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   xdg.portal = {
     enable = true;
     # IMPORTANT: Setting this to false often fixes the "No Apps Available"
@@ -9,5 +10,5 @@
       pkgs.xdg-desktop-portal-gtk
       pkgs.xdg-desktop-portal-wlr
     ];
-};
+  };
 }
