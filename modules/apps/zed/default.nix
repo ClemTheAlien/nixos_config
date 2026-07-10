@@ -16,7 +16,7 @@
     # 2. Global Zed Configuration
     userSettings = {
       # Use your installed Rosé Pine Moon theme
-      theme = "Rosé Pine Moon";
+      theme = "Rosé Pine Dawn";
 
       # UI tweaks
       ui_font_size = 15;
@@ -35,26 +35,29 @@
         };
       };
 
-      # Language overrides to enforce ccls and use formatting
+      # Language overrides (CRITICAL: Must be lowercase in Zed!)
       languages = {
-        "C" = {
+        "c" = {
           format_on_save = "on";
           language_servers = [
             "ccls"
-            "!clangd"
-          ]; # Swap clangd for ccls
+            "!clangd" # Disables the default built-in clangd
+          ];
         };
-        "C++" = {
+        "c++" = {
           format_on_save = "on";
           language_servers = [
             "ccls"
             "!clangd"
           ];
         };
-        "CMake" = {
+        "cmake" = {
           format_on_save = "on";
+          language_servers = [
+            "neocmake" # Explicitly hook up your extension's server
+          ];
         };
-        "Nix" = {
+        "nix" = {
           format_on_save = "on";
           formatter = {
             external = {
