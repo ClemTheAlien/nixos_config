@@ -4,19 +4,17 @@
     enable = true;
     enableZshIntegration = true;
     settings = {
+      theme = "Rose Pine Dawn";
       font-family = "Departure Mono";
       font-size = 8.5;
 
-      background-opacity = 0.8;
+      background-opacity = 1;
       background-blur = true;
 
       keybind = [
         "alt+t=new_tab"
         "alt+c=close_tab"
       ];
-
-      command = "${pkgs.bash}/bin/bash -c '${pkgs.pywal}/bin/wal -R && clear && ${pkgs.fastfetch}/bin/fastfetch; exec ${pkgs.zsh}/bin/zsh'";
-
       confirm-close-surface = false;
     };
   };
