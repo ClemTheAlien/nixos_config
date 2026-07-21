@@ -7,6 +7,7 @@
       "nix"
       "vscode-icons"
       "neocmake"
+      "assembly"
       "rose-pine-theme"
     ];
 
