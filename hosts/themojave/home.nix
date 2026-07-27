@@ -10,6 +10,7 @@
     ../../modules/apps/zsh
     ../../modules/desktop/fuzzel
     ../../modules/desktop/theme
+    ../../modules/desktop/waybar
   ];
 
   home.username = "clemmie";
@@ -40,6 +41,7 @@
     curtail
     metadata-cleaner
     librewolf-bin
+    waypaper
 
     # Font packages
     fontconfig

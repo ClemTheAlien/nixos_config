@@ -61,6 +61,8 @@
       borderpx=0
       blur=1
       border_radius = 12
+
+      exec-once = waybar
     '';
 
   };

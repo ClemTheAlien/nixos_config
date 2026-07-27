@@ -9,6 +9,7 @@
     ../../modules/apps/zsh
     ../../modules/desktop/fuzzel
     ../../modules/desktop/theme
+    ../../modules/desktop/waybar
   ];
 
   home.username = "clemmie";
@@ -33,6 +34,8 @@
     obs-studio
     curtail
     metadata-cleaner
+    librewolf-bin
+    waypaper
 
     # Font packages
     fontconfig
