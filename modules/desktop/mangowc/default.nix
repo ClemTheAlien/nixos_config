@@ -63,6 +63,7 @@
       border_radius = 12
 
       exec-once = waybar
+      exec-once = waypaper --restore
     '';
 
   };
