@@ -8,8 +8,8 @@
     bluez-tools # bluetooth
     blueman # bluetooth gui
     pwvucontrol # audio gui
+    nautilus #file manager
     networkmanagerapplet # network gui
-    yazi # file explorer
     feh # image viewer
     wl-clipboard # clipboard
 

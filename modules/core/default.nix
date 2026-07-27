@@ -15,7 +15,7 @@
     ./pipewire
     ./xdg
     ./fonts
-    ./ly
+    ./greetd
     ./flatpak
     ./zsh
     ./mullvad-vpn
