@@ -36,6 +36,7 @@
     metadata-cleaner
     librewolf-bin
     waypaper
+    swaybg
 
     # Font packages
     fontconfig
