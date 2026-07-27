@@ -6,10 +6,10 @@
     ../../modules/apps/ghostty
     ../../modules/apps/fastfetch
     ../../modules/desktop/mangowc
-    ../../modules/desktop/noctalia-shell
     ../../modules/apps/git
     ../../modules/apps/zsh
-    ../../modules/desktop/hyprlock
+    ../../modules/desktop/fuzzel
+    ../../modules/desktop/theme
   ];
 
   home.username = "clemmie";

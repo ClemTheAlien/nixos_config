@@ -9,15 +9,13 @@
     blueman # bluetooth gui
     pwvucontrol # audio gui
     networkmanagerapplet # network gui
-    pcmanfm # file explorer
+    yazi # file explorer
     feh # image viewer
     wl-clipboard # clipboard
 
     webcamoid # webcam
     ghostty # terminal
     fastfetch # fetch
-    pywal # colorscheme
-    imagemagick # colorscheme backend
     cava # audio visualizer
     grim # screenshot
     satty # screenshot

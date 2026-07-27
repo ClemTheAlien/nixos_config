@@ -21,7 +21,7 @@
       #Keys
       bind=SUPER,Return,spawn,ghostty
       bind=SUPER+SHIFT,c,killclient,
-      bind=SUPER,r,spawn,noctalia-shell ipc call launcher toggle
+      bind=SUPER,r,spawn,fuzzel
       bind=SUPER+SHIFT,r,reload_config
       bind=SUPER+SHIFT,e,quit,
       bind=SUPER, L, spawn, hyprlock
@@ -61,8 +61,6 @@
       borderpx=0
       blur=1
       border_radius = 12
-
-      exec-once=noctalia-shell
     '';
 
   };
