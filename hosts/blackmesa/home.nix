@@ -10,6 +10,7 @@
     ../../modules/desktop/fuzzel
     ../../modules/desktop/theme
     ../../modules/desktop/waybar
+    ../../modules/desktop/hyprlock
   ];
 
   home.username = "clemmie";
