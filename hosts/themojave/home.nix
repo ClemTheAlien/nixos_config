@@ -33,10 +33,7 @@
     vlc
     libreoffice-fresh
     git
-    github-cli
-    act
-    nix-direnv
-    direnv
+    devenv
     krita
     obs-studio
     curtail

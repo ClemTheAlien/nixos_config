@@ -1,0 +1,9 @@
+# treefmt.toml
+
+[global]
+# Project root file to find the top of your workspace
+project-root-file = "devenv.nix"
+
+[formatter.nixfmt]
+command = "nixfmt"
+includes = ["*.nix"]

@@ -38,6 +38,7 @@
     librewolf-bin
     waypaper
     swaybg
+    git
 
     # Font packages
     fontconfig

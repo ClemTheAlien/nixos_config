@@ -24,6 +24,7 @@
     # 3. Custom prompt and extra interactive setup
     initExtra = ''
       PS1="%B%{$fg[green]%}[%{$fg[cyan]%}%n%{$fg[white]%}@%{$fg[green]%}%M %{$fg[blue]%}%~%{$fg[green]%}]%{$reset_color%}$%b "
+      eval "$(devenv hook zsh)"
     '';
 
     loginExtra = ''
