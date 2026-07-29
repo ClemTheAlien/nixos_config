@@ -41,6 +41,9 @@
     librewolf-bin
     waypaper
     swaybg
+    lsd
+    bat
+    any-nix-shell
 
     # Font packages
     fontconfig

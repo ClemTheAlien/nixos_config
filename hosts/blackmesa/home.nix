@@ -39,6 +39,9 @@
     waypaper
     swaybg
     git
+    lsd
+    bat
+    any-nix-shell
 
     # Font packages
     fontconfig
