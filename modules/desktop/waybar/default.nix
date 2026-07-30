@@ -21,9 +21,12 @@ let
   '';
 in
 {
-  # Ensures JetBrains Mono Nerd Font is installed for icons
+  # Ensures required font, grim (screenshot), slurp (region selector), and libnotify are installed
   home.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
+    grim
+    slurp
+    libnotify
   ];
 
   programs.waybar = {
@@ -45,6 +48,7 @@ in
         ];
         modules-center = [ "clock" ];
         modules-right = [
+          "custom/screenshot"
           "tray"
           "pulseaudio"
           "battery"
@@ -72,6 +76,11 @@ in
           on-click = "xdg-open https://calendar.google.com";
         };
 
+        "custom/screenshot" = {
+          format = "󰄄";
+          on-click = "grim -g \"$(slurp)\" - | wl-copy ";
+        };
+
         "tray" = {
           icon-size = 18;
           spacing = 10;
@@ -82,7 +91,11 @@ in
           format-muted = "󰝟 Muted";
           format-icons = {
             headphone = "";
-            default = [ "󰕿" "󰖀" "󰕾" ];
+            default = [
+              "󰕿"
+              "󰖀"
+              "󰕾"
+            ];
           };
           on-click = "pwvucontrol";
         };
@@ -95,7 +108,19 @@ in
           format = "{icon} {capacity}%";
           format-charging = "󰂄 {capacity}%";
           format-plugged = " {capacity}%";
-          format-icons = [ "󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
+          format-icons = [
+            "󰂎"
+            "󰁺"
+            "󰁻"
+            "󰁼"
+            "󰁽"
+            "󰁾"
+            "󰁿"
+            "󰂀"
+            "󰂁"
+            "󰂂"
+            "󰁹"
+          ];
         };
       };
     };
@@ -117,6 +142,7 @@ in
       /* Base module pill style for Dawn light theme */
       #workspaces,
       #clock,
+      #custom-screenshot,
       #tray,
       #pulseaudio,
       #battery {
@@ -161,6 +187,10 @@ in
       }
 
       /* Right Side */
+      #custom-screenshot {
+        color: @pine;
+      }
+
       #pulseaudio {
         color: @gold;
       }
