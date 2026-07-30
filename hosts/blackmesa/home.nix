@@ -11,6 +11,7 @@
     ../../modules/desktop/theme
     ../../modules/desktop/waybar
     ../../modules/desktop/hyprlock
+    ../../modules/desktop/starship
   ];
 
   home.username = "clemmie";
@@ -39,9 +40,6 @@
     waypaper
     swaybg
     git
-    lsd
-    bat
-    any-nix-shell
 
     # Font packages
     fontconfig

@@ -1,11 +1,16 @@
 { config, pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    lsd
+    bat
+    any-nix-shell
+  ];
   programs.zsh = {
     enable = true;
     initContent = ''
       any-nix-shell zsh --info-right | source /dev/stdin
-      eval $(devenv hook zsh)
+      fastfetch
     '';
     loginExtra = ''
       export XDG_DATA_DIRS=$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share

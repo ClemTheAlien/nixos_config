@@ -1,0 +1,77 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](#907AA9)\
+$os\
+$username\
+[](bg:#D7827E fg:#907AA9)\
+$directory\
+[](fg:#D7827E bg:#EA9D34)\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+[](fg:#EA9D34 bg:#286983)\
+$nix_shell\
+[](fg:#286983 bg:#56949F)\
+$docker_context\
+[](fg:#56949F bg:#B4637A)\
+$sudo\
+[ ](fg:#B4637A)\
+"""
+
+add_newline = false
+
+[username]
+show_always = true
+style_user = "bg:#907AA9 fg:#FAF4ED"
+style_root = "bg:#907AA9 fg:#FAF4ED"
+format = '[$user ]($style)'
+disabled = false
+
+[os]
+style = "bg:#907AA9 fg:#FAF4ED"
+disabled = true # Disabled by default
+
+[directory]
+style = "bg:#D7827E fg:#FAF4ED"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+style = "bg:#EA9D34 fg:#FAF4ED"
+format = '[ $symbol$branch ]($style)'
+
+[git_status]
+style = "bg:#EA9D34 fg:#FAF4ED"
+format = '[$all_status$ahead_behind ]($style)'
+
+[nix_shell]
+symbol = " "
+style = "bg:#286983 fg:#FAF4ED"
+format = '[ $symbol($state) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:#56949F fg:#FAF4ED"
+format = '[ $symbol($context) ]($style)'
+
+[sudo]
+symbol = " "
+style = "bg:#B4637A fg:#FAF4ED"
+format = '[ $symbol ]($style)'
+disabled = false
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:#B4637A fg:#FAF4ED"
+format = '[ ♥ $time ]($style)'
