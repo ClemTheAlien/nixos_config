@@ -8,14 +8,13 @@
     bluez-tools # bluetooth
     blueman # bluetooth gui
     pwvucontrol # audio gui
-    nautilus #file manager
+    nautilus # file manager
     networkmanagerapplet # network gui
     feh # image viewer
     wl-clipboard # clipboard
 
     webcamoid # webcam
     ghostty # terminal
-    fastfetch # fetch
     cava # audio visualizer
     grim # screenshot
     satty # screenshot

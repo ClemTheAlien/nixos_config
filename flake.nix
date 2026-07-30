@@ -16,8 +16,8 @@
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
-    noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
+    exfetch = {
+      url = "git+https://codeberg.org/Izder456/exfetch";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -28,7 +28,7 @@
       nixpkgs,
       home-manager,
       mangowc,
-      noctalia,
+      exfetch,
       ...
     }@inputs:
     let
@@ -57,27 +57,25 @@
           ];
         };
       };
+
       homeConfigurations = {
         "clemmie@themojave" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
+          extraSpecialArgs = { inherit inputs; };
           modules = [
             ./hosts/themojave/home.nix
-            noctalia.homeModules.default
             mangowc.hmModules.mango
-
           ];
         };
 
         "clemmie@blackmesa" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
+          extraSpecialArgs = { inherit inputs; };
           modules = [
             ./hosts/blackmesa/home.nix
-            noctalia.homeModules.default
             mangowc.hmModules.mango
-
           ];
         };
       };
-
     };
 }

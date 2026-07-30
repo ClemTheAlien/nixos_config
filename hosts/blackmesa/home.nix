@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   imports = [
@@ -25,7 +30,10 @@
     XDG_CACHE_HOME = "/home/clemmie/.cache"; # Ensure cache directory is set
   };
 
-  home.packages = with pkgs; [
+  home.packages = [
+    inputs.exfetch.packages.${pkgs.system}.default
+  ]
+  ++ (with pkgs; [
     clementine
     keepassxc
     vlc
@@ -41,14 +49,12 @@
     swaybg
     git
 
-    # Font packages
     fontconfig
-    (pkgs.writeShellScriptBin "fc-cache-setup" ''
+    (writeShellScriptBin "fc-cache-setup" ''
       mkdir -p /home/clemmie/.cache/fontconfig
-      ${pkgs.fontconfig}/bin/fc-cache -fv
+      ${fontconfig}/bin/fc-cache -fv
     '')
-  ];
-
+  ]);
   # Font configuration to fix cache issues
   fonts.fontconfig.enable = true;
 

@@ -6,7 +6,7 @@
     settings = {
       theme = "Rose Pine Dawn";
       font-family = "Departure Mono";
-      font-size = 8.5;
+      font-size = 12;
 
       background-opacity = 1;
       background-blur = true;
