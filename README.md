@@ -9,3 +9,10 @@ Make sure to ```home manager switch --flake .nixos_config#[INSERT_HOST]``` ```su
 - Flatseal
 - Prism Launcher
 - LibreWolf
+
+## Special Thanks to...
+* https://gitlab.com/ntgn/ascii-art - for the ascii art!
+* https://codeberg.org/Izder456/exfetch - for the EPIC fetch!
+* https://github.com/mangowm/mango - for the amazingly minimal yet beautiful WM!
+* https://devenv.sh/ - for the amazing reproducable dev enviroments!
+* AND EVERY PACKAGE/PROJECT IN THE REPO - THANKS FOR EXISTING STUNNINGLY :)
