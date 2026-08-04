@@ -14,12 +14,21 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nixos-hardware = {
+      url = "github:NixOS/nixos-hardware/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     exfetch = {
       url = "git+https://codeberg.org/Izder456/exfetch";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    vm-curator = {
+      url = "github:mroboff/vm-curator/";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =
@@ -29,6 +38,7 @@
       home-manager,
       mangowc,
       exfetch,
+      vm-curator,
       ...
     }@inputs:
     let

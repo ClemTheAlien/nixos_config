@@ -32,8 +32,10 @@
   };
   home.packages = [
     inputs.exfetch.packages.${pkgs.system}.default
+    inputs.vm-curator.packages.${pkgs.system}.default
   ]
   ++ (with pkgs; [
+    qemu
     zotero
     anki
     clementine
