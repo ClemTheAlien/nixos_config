@@ -30,7 +30,6 @@
     };
 
   };
-
   outputs =
     {
       self,
