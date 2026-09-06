@@ -21,7 +21,7 @@
 
   home.username = "clemmie";
   home.homeDirectory = "/home/clemmie";
-  home.stateVersion = "25.11";
+  home.stateVersion = "26c.11";
   nixpkgs.config.allowUnfree = true;
 
   home.sessionVariables = {

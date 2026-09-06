@@ -22,7 +22,7 @@
 
   home.username = "clemmie";
   home.homeDirectory = "/home/clemmie";
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.11";
   nixpkgs.config.allowUnfree = true;
 
   home.sessionVariables = {
@@ -32,8 +32,10 @@
   };
   home.packages = [
     inputs.exfetch.packages.${pkgs.system}.default
+    inputs.vm-curator.packages.${pkgs.system}.default
   ]
   ++ (with pkgs; [
+    qemu
     zotero
     anki
     clementine

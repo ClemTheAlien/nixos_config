@@ -1,16 +1,11 @@
 { pkgs, ... }:
 
 {
-  # 1. Enable pointerCursor (handles GTK/X11/Wayland linkage)
-  home.pointerCursor = {
-    gtk.enable = true;
-    x11.enable = true;
-    name = "Bibata-Modern-Ice";
+  gtk.cursorTheme = {
     package = pkgs.bibata-cursors;
-    size = 24; # Adjust size if needed
+    name = "Bibata-Modern-Ice";
+    size = 24;
   };
-
-  # 2. Your GTK config
   gtk = {
     enable = true;
 
@@ -21,9 +16,7 @@
 
     theme = {
       name = "rose-pine-dawn";
-      package = pkgs.rose-pine-gtk-theme;
+      package = pkgs.rose-pine-kvantum;
     };
-
-    # gtk.cursorTheme can be omitted if home.pointerCursor.gtk.enable = true is set
   };
 }
