@@ -45,6 +45,12 @@
             inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t480
             inputs.mangowc.nixosModules.mango
             home-manager.nixosModules.home-manager
+            {
+              imports = [
+              ./hosts/themojave/home.nix
+              mangowc.hmModules.mango
+              ];
+            }
           ];
         };
 
@@ -54,28 +60,15 @@
             ./hosts/blackmesa
             inputs.mangowc.nixosModules.mango
             home-manager.nixosModules.home-manager
+            {
+              imports = [
+              ./hosts/blackmesa/home.nix
+              mangowc.hmModules.mango
+              ];
+            }
           ];
         };
       };
-
-      homeConfigurations = {
-        "clemmie@themojave" = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          extraSpecialArgs = { inherit inputs; };
-          modules = [
-            ./hosts/themojave/home.nix
-            mangowc.hmModules.mango
-          ];
-        };
-
-        "clemmie@blackmesa" = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          extraSpecialArgs = { inherit inputs; };
-          modules = [
-            ./hosts/blackmesa/home.nix
-            mangowc.hmModules.mango
-          ];
-        };
       };
     };
 }
