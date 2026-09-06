@@ -46,10 +46,15 @@
             inputs.mangowc.nixosModules.mango
             home-manager.nixosModules.home-manager
             {
-              imports = [
-              ./hosts/themojave/home.nix
-              mangowc.hmModules.mango
-              ];
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = { inherit inputs; };
+              home-manager.users.clemmie = {
+                imports = [
+                  ./hosts/themojave/home.nix
+                  mangowc.hmModules.mango
+                ];
+              };
             }
           ];
         };
@@ -61,14 +66,18 @@
             inputs.mangowc.nixosModules.mango
             home-manager.nixosModules.home-manager
             {
-              imports = [
-              ./hosts/blackmesa/home.nix
-              mangowc.hmModules.mango
-              ];
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = { inherit inputs; };
+              home-manager.users.clemmie = {
+                imports = [
+                  ./hosts/blackmesa/home.nix
+                  mangowc.hmModules.mango
+                ];
+              };
             }
           ];
         };
       };
       };
-    };
 }
