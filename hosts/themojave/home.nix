@@ -48,7 +48,7 @@
     obs-studio
     curtail
     metadata-cleaner
-    librewolf-bin
+    firefox
     waypaper
     swaybg
 

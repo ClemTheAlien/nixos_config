@@ -20,8 +20,6 @@
 
     shellAliases = {
       world_update = "sudo nixos-rebuild switch --flake $HOME/.nixos_config#$HOST";
-      home_update = "home-manager switch --flake $HOME/.nixos_config#clemmie@$HOST";
-      update = "world_update && home_update";
       boot_update = "sudo nixos-rebuild boot --flake .nixos_config#$HOST";
       ls = "lsd -l";
       cat = "bat";
