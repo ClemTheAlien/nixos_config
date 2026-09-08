@@ -12,6 +12,7 @@
     enable = true;
     initContent = ''
       any-nix-shell zsh --info-right | source /dev/stdin
+      eval "$(devenv hook zsh)"
       exfetch -l -s ': ' -c 5 -a ~/.nixos_config/modules/apps/zsh/nixos_logo_ntgn.ascii -o 'user,os,ver,uptime,dewm,shell,term,pkgs'
     '';
     loginExtra = ''
