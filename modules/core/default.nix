@@ -50,6 +50,7 @@
       "networkmanager"
       "wheel"
       "docker"
+      "libvirtd"
     ];
     packages = with pkgs; [ ];
     shell = pkgs.zsh;

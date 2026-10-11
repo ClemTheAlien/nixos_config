@@ -15,7 +15,9 @@
   environment.etc."distrobox/distrobox.conf".text = ''
     container_additional_volumes="/nix/store:/nix/store:ro"
   '';
-
+  # Virt Manager
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
   #Waydroid
   virtualisation.waydroid.enable = true;
   virtualisation.waydroid.package = pkgs.waydroid-nftables;
