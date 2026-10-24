@@ -35,6 +35,7 @@
   ]
   ++ (with pkgs; [
     qemu
+    kicad
     zotero
     anki
     clementine

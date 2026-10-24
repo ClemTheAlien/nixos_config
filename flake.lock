@@ -195,8 +195,7 @@
         "home-manager": "home-manager",
         "mangowc": "mangowc",
         "nixos-hardware": "nixos-hardware",
-        "nixpkgs": "nixpkgs",
-        "vm-curator": "vm-curator"
+        "nixpkgs": "nixpkgs"
       }
     },
     "scenefx": {
@@ -234,26 +233,6 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default-linux",
-        "type": "github"
-      }
-    },
-    "vm-curator": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1785447042,
-        "narHash": "sha256-lq6UuT0ECmuYT2sByYVUi8GHTM2mq0X1c45/WA8+Zss=",
-        "owner": "mroboff",
-        "repo": "vm-curator",
-        "rev": "03eb69e019df4a802b86fd44f5624360a86e0bf9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "mroboff",
-        "repo": "vm-curator",
         "type": "github"
       }
     }
