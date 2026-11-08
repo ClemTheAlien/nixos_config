@@ -1,25 +1,6 @@
 { config, pkgs, ... }:
 {
-  #Docker
-  virtualisation.docker.enable = true;
-  #Podman
-  virtualisation.containers.enable = true;
-  virtualisation.podman = {
-    enable = true;
-  };
-  #Distrobox
-  environment.systemPackages = [
-    pkgs.distrobox
-    pkgs.wl-clipboard
-  ];
-  environment.etc."distrobox/distrobox.conf".text = ''
-    container_additional_volumes="/nix/store:/nix/store:ro"
-  '';
   # Virt Manager
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
-  #Waydroid
-  virtualisation.waydroid.enable = true;
-  virtualisation.waydroid.package = pkgs.waydroid-nftables;
-
 }

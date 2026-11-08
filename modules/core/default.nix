@@ -18,7 +18,6 @@
     ./greetd
     ./flatpak
     ./zsh
-    ./mullvad-vpn
   ];
 
   time.timeZone = "America/Chicago";
