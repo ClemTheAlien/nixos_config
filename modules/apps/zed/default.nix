@@ -12,7 +12,7 @@
     ];
 
     userSettings = {
-      theme = "Rosé Pine Dawn";
+      theme = "Gruvbox Dark Soft";
       ui_font_size = 15;
       buffer_font_size = 14;
       load_direnv = "direct";

@@ -16,7 +16,6 @@
     ../../modules/desktop/fuzzel
     ../../modules/desktop/theme
     ../../modules/desktop/waybar
-    ../../modules/desktop/hyprlock
     ../../modules/desktop/starship
   ];
 

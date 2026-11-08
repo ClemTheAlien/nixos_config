@@ -1,32 +1,34 @@
 { pkgs, ... }:
 
 let
-  # Rosé Pine Dawn Palette Variables (Light Theme)
-  rose-pine-dawn = ''
-    @define-color base         #faf4ed;
-    @define-color surface      #fffaf3;
-    @define-color overlay      #f2e9e1;
-    @define-color muted        #9893a5;
-    @define-color subtle       #797593;
-    @define-color text         #575279;
-    @define-color love         #b4637a;
-    @define-color gold         #ea9d34;
-    @define-color rose         #d7827e;
-    @define-color pine         #286983;
-    @define-color foam         #56949f;
-    @define-color iris         #907aa9;
-    @define-color highlightLow  #f4ede8;
-    @define-color highlightMed  #dfdad9;
-    @define-color highlightHigh #cecacd;
+  # Gruvbox Dark Soft Palette Variables
+  gruvbox-dark-soft = ''
+    @define-color base         #32302f;    /* Dark0 Soft (Background) */
+    @define-color surface      #3c3836;    /* Dark1 (Surface) */
+    @define-color overlay      #504945;    /* Dark2 (Overlay/Selection) */
+    @define-color muted        #928374;    /* Gray (Muted text) */
+    @define-color subtle       #a89984;    /* Light4 (Subtle text) */
+    @define-color text         #ebdbb2;    /* Light1 (Main text) */
+    @define-color love         #fb4934;    /* Bright Red */
+    @define-color gold         #fabd2f;    /* Bright Yellow */
+    @define-color rose         #fe8019;    /* Bright Orange */
+    @define-color pine         #83a598;    /* Bright Blue */
+    @define-color foam         #8ec07c;    /* Bright Aqua */
+    @define-color iris         #d3869b;    /* Bright Purple */
+    @define-color highlightLow  #282828;    /* Dark0 */
+    @define-color highlightMed  #504945;    /* Dark2 */
+    @define-color highlightHigh #665c54;    /* Dark3 */
   '';
 in
 {
-  # Ensures required font, grim (screenshot), slurp (region selector), and libnotify are installed
+  # Required dependencies for bar modules and styling
   home.packages = with pkgs; [
+    departure-mono
     nerd-fonts.jetbrains-mono
     grim
     slurp
     libnotify
+    pwvucontrol
   ];
 
   programs.waybar = {
@@ -78,7 +80,7 @@ in
 
         "custom/screenshot" = {
           format = "󰄄";
-          on-click = "grim -g \"$(slurp)\" - | wl-copy ";
+          on-click = "grim -g \"$(slurp)\" - | wl-copy";
         };
 
         "tray" = {
@@ -125,7 +127,7 @@ in
       };
     };
 
-    style = rose-pine-dawn + ''
+    style = gruvbox-dark-soft + ''
       * {
         border: none;
         border-radius: 0;
@@ -139,7 +141,7 @@ in
         color: @text;
       }
 
-      /* Base module pill style for Dawn light theme */
+      /* Base module pill style for Gruvbox Dark Soft */
       #workspaces,
       #clock,
       #custom-screenshot,
@@ -166,7 +168,8 @@ in
         border-radius: 4px;
       }
 
-      #workspaces button.active {
+      #workspaces button.active,
+      #workspaces button.focused {
         color: @foam;
         background-color: @overlay;
       }

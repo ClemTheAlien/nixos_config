@@ -1,41 +1,41 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](#907AA9)\
+[](#b16286)\
 $os\
 $username\
-[](bg:#D7827E fg:#907AA9)\
+[](bg:#cc241d fg:#b16286)\
 $directory\
-[](fg:#D7827E bg:#EA9D34)\
+[](fg:#cc241d bg:#d79921)\
 $git_branch\
 $git_commit\
 $git_state\
 $git_metrics\
 $git_status\
-[](fg:#EA9D34 bg:#286983)\
+[](fg:#d79921 bg:#458588)\
 $nix_shell\
-[](fg:#286983 bg:#56949F)\
+[](fg:#458588 bg:#689d6a)\
 $docker_context\
-[](fg:#56949F bg:#B4637A)\
+[](fg:#689d6a bg:#d65d0e)\
 $sudo\
-[ ](fg:#B4637A)\
+[ ](fg:#d65d0e)\
 """
 
 add_newline = false
 
 [username]
 show_always = true
-style_user = "bg:#907AA9 fg:#FAF4ED"
-style_root = "bg:#907AA9 fg:#FAF4ED"
+style_user = "bg:#b16286 fg:#ebdbb2"
+style_root = "bg:#b16286 fg:#ebdbb2"
 format = '[$user ]($style)'
 disabled = false
 
 [os]
-style = "bg:#907AA9 fg:#FAF4ED"
+style = "bg:#b16286 fg:#ebdbb2"
 disabled = true # Disabled by default
 
 [directory]
-style = "bg:#D7827E fg:#FAF4ED"
+style = "bg:#cc241d fg:#ebdbb2"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -47,31 +47,31 @@ truncation_symbol = "…/"
 "Pictures" = " "
 
 [git_branch]
-style = "bg:#EA9D34 fg:#FAF4ED"
+style = "bg:#d79921 fg:#ebdbb2"
 format = '[ $symbol$branch ]($style)'
 
 [git_status]
-style = "bg:#EA9D34 fg:#FAF4ED"
+style = "bg:#d79921 fg:#ebdbb2"
 format = '[$all_status$ahead_behind ]($style)'
 
 [nix_shell]
 symbol = " "
-style = "bg:#286983 fg:#FAF4ED"
+style = "bg:#458588 fg:#ebdbb2"
 format = '[ $symbol($state) ]($style)'
 
 [docker_context]
 symbol = " "
-style = "bg:#56949F fg:#FAF4ED"
+style = "bg:#689d6a fg:#ebdbb2"
 format = '[ $symbol($context) ]($style)'
 
 [sudo]
 symbol = " "
-style = "bg:#B4637A fg:#FAF4ED"
+style = "bg:#d65d0e fg:#ebdbb2"
 format = '[ $symbol ]($style)'
 disabled = false
 
 [time]
 disabled = false
 time_format = "%R"
-style = "bg:#B4637A fg:#FAF4ED"
+style = "bg:#d65d0e fg:#ebdbb2"
 format = '[ ♥ $time ]($style)'
